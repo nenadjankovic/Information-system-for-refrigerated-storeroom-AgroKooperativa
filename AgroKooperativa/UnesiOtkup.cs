@@ -17,12 +17,14 @@ namespace AgroKooperativa
         private readonly ProizvodjacBusiness proizvodjacBusiness;
         private readonly VoceBusiness voceBusiness;
         private readonly OtkupBusiness otkupBusiness;
+        private readonly AmbalazaBusiness ambalazaBusiness;
         public UnesiOtkup()
         {
             InitializeComponent();
             this.proizvodjacBusiness = new ProizvodjacBusiness();
             this.voceBusiness = new VoceBusiness();
             this.otkupBusiness = new OtkupBusiness();   
+            this.ambalazaBusiness = new AmbalazaBusiness();
         }
 
         private void UnesiOtkup_Load(object sender, EventArgs e)
@@ -95,6 +97,20 @@ namespace AgroKooperativa
             else
             {
                 MessageBox.Show("Neuspešno zaveden otkup!");
+            }
+
+            Ambalaza a = new Ambalaza();
+            a.vraceno = Convert.ToInt32(txtVraćeno.Text);
+            a.izdato = Convert.ToInt32(txtIzdato.Text);
+            a.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
+
+            if (this.ambalazaBusiness.InsertAmbalaza(a))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Neuspešno zavedena ambalaža");
             }
         }
     }

@@ -39,6 +39,12 @@
             this.dtpOtkup = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.btnUnesi = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIzdato = new System.Windows.Forms.TextBox();
+            this.txtVraćeno = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbProizvodjaci
@@ -109,7 +115,7 @@
             // 
             // dtpOtkup
             // 
-            this.dtpOtkup.Location = new System.Drawing.Point(26, 161);
+            this.dtpOtkup.Location = new System.Drawing.Point(77, 160);
             this.dtpOtkup.Name = "dtpOtkup";
             this.dtpOtkup.Size = new System.Drawing.Size(200, 20);
             this.dtpOtkup.TabIndex = 8;
@@ -117,7 +123,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 135);
+            this.label5.Location = new System.Drawing.Point(74, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 9;
@@ -125,7 +131,7 @@
             // 
             // btnUnesi
             // 
-            this.btnUnesi.Location = new System.Drawing.Point(51, 277);
+            this.btnUnesi.Location = new System.Drawing.Point(125, 277);
             this.btnUnesi.Name = "btnUnesi";
             this.btnUnesi.Size = new System.Drawing.Size(75, 46);
             this.btnUnesi.TabIndex = 10;
@@ -133,11 +139,57 @@
             this.btnUnesi.UseVisualStyleBackColor = true;
             this.btnUnesi.Click += new System.EventHandler(this.btnUnesi_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtVraćeno);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtIzdato);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(26, 201);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(275, 70);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ambalaža";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(48, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Izdato:";
+            // 
+            // txtIzdato
+            // 
+            this.txtIzdato.Location = new System.Drawing.Point(21, 41);
+            this.txtIzdato.Name = "txtIzdato";
+            this.txtIzdato.Size = new System.Drawing.Size(100, 20);
+            this.txtIzdato.TabIndex = 1;
+            // 
+            // txtVraćeno
+            // 
+            this.txtVraćeno.Location = new System.Drawing.Point(154, 41);
+            this.txtVraćeno.Name = "txtVraćeno";
+            this.txtVraćeno.Size = new System.Drawing.Size(100, 20);
+            this.txtVraćeno.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(181, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Vraćeno:";
+            // 
             // UnesiOtkup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 335);
+            this.ClientSize = new System.Drawing.Size(322, 335);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUnesi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpOtkup);
@@ -150,8 +202,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbProizvodjaci);
             this.Name = "UnesiOtkup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Otkup";
             this.Load += new System.EventHandler(this.UnesiOtkup_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +225,10 @@
         private System.Windows.Forms.DateTimePicker dtpOtkup;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnUnesi;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtVraćeno;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIzdato;
+        private System.Windows.Forms.Label label6;
     }
 }
