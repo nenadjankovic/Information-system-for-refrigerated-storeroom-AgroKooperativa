@@ -32,5 +32,10 @@ namespace AgroKooperativa
             m.Closed += (s, args) => this.Close();
             m.Show();
         }
+
+        private void Meni_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

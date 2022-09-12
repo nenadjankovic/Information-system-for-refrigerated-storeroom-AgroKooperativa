@@ -19,7 +19,7 @@ namespace DataLayer
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT * FROM CenaVoca";
+                sqlCommand.CommandText = "SELECT * FROM CeneVoca";
                 sqlConnection.Open();
 
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
@@ -61,13 +61,7 @@ namespace DataLayer
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandText = string.Format("UPDATE CeneVoca SET  CenaIKlase={0} , CenaIIKlase={1} , Datum='{2}'  WHERE idCeneVoca={3}",
                 c.CenaIKlase, c.CenaIIKlase,c.Datum, c.FK_IDVoca);
-            /*sqlCommand.Parameters.Add("p1", c.CenaIKlase);
-            sqlCommand.Parameters.Add("p2", c.CenaIIKlase);
-            sqlCommand.Parameters.Add("p3", c.Datum);
-            sqlCommand.Parameters.Add("p4", c.FK_IDVoca);*/
-            
-
-
+         
             return sqlCommand.ExecuteNonQuery();
             }
         }

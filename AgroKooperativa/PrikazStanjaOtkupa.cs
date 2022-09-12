@@ -20,11 +20,16 @@ namespace AgroKooperativa
         private readonly VoceBusiness voceBusiness;
         private readonly ProizvodjacBusiness proizvodjacBusiness;
         private readonly OtkupBusiness otkupBusiness;
+        private readonly CenaVocaBusiness cenaVocaBusiness;
+        private readonly AmbalazaBusiness ambalazaBusiness;
+
         public PrikazStanjaOtkupa()
         {
             this.proizvodjacBusiness = new ProizvodjacBusiness();
             this.voceBusiness = new VoceBusiness();
             this.otkupBusiness = new OtkupBusiness();
+            this.cenaVocaBusiness = new CenaVocaBusiness();
+            this.ambalazaBusiness = new AmbalazaBusiness();
             
             InitializeComponent();
         }
@@ -35,6 +40,8 @@ namespace AgroKooperativa
             string idPr = pr.Substring(0, pr.IndexOf(" ")); //odvajanje samo id
             int idProizvodjaca = Convert.ToInt32(idPr);
 
+            
+
             string vocestr = cbVoce.GetItemText(cbVoce.SelectedItem);
             string idVocaStr = vocestr.Substring(0, vocestr.IndexOf(" "));
             string nazivVoca = vocestr.Substring(vocestr.IndexOf(" "), vocestr.Length-1);
@@ -43,21 +50,35 @@ namespace AgroKooperativa
             List<Voce> voce  = this.voceBusiness.GetAllVoce();
             List < Proizvodjac > proizvodjaci = this.proizvodjacBusiness.GetAllProizvodjac();
             List<Otkup> otkup = this.otkupBusiness.GetAllOtkup();
+            List<Cena> cene = this.cenaVocaBusiness.GetAllCena();
 
             lblVoce.Text = nazivVoca;
-            decimal suma = 0;
+            decimal sumaI = 0;
+            decimal sumaII = 0;
             foreach(Otkup o in otkup)
             {
-                if (o.idProizvodjaca == idProizvodjaca)
+                if (o.idProizvodjaca == idProizvodjaca && o.IDVoca == idVoca)
                 {
-                    suma += o.KolicinaIKlase;
+                    sumaI += o.KolicinaIKlase;
+                    sumaII += o.KolicinaIIKlase;
                 }
-                else
-                    suma = 0;
+                
             }
+          
 
-            lblKolicina.Text =  Convert.ToString(suma);
-
+            lblKolicinaIKlase.Text =  Convert.ToString(sumaI);
+            lblKolicinaIIklase.Text = Convert.ToString(sumaII);
+            foreach(Cena c in cene)
+            {
+                if (c.FK_IDVoca == idVoca)
+                {
+                    lblCenaIKlase.Text = Convert.ToString(c.CenaIKlase);
+                    lblCena2Klase.Text = Convert.ToString(c.CenaIIKlase);
+                    decimal uk = (sumaI * c.CenaIKlase) + (sumaII * c.CenaIIKlase);
+                    lblUkupno.Text = Convert.ToString(Math.Round(uk, 2));
+                } 
+            }
+            
             
 
 
@@ -80,20 +101,31 @@ namespace AgroKooperativa
             foreach (Proizvodjac p in proizvodjaci)
             {
                 cbProizvodjac.Items.Add(p.idProizvodjaca + " " + p.ime + " " + p.prezime);
+                cbPrAmbalaza.Items.Add(p.idProizvodjaca + " " + p.ime + " " + p.prezime);
+
             }
 
          }
 
-       /* public void FillGrid(int idVoca, int idProizvodjaca)
+        private void btnUcitajAmbalazu_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(Konstante.connectionString))
+            string prAm = cbPrAmbalaza.GetItemText(cbPrAmbalaza.SelectedItem); //ceo combo
+            string idPrAm = prAm.Substring(0, prAm.IndexOf(" ")); //odvajanje samo id
+            int idProizvodjacaAm = Convert.ToInt32(idPrAm);
+            List<Ambalaza> ambalaze = this.ambalazaBusiness.GetAllAmbalaza();
+            int sumaIz = 0;
+            int sumaVr = 0;
+            foreach(Ambalaza a in ambalaze)
             {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("select Voce.Naziv, Otkup.KolicinaIKlase from Voce,Otkup where Voce.IDVoca = " + idVoca + "AND Otkup.idProizvodjaca = " + idProizvodjaca, sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dgwStanje.DataSource = dtbl;
+                if(a.idProizvodjaca == idProizvodjacaAm)
+                {
+                    sumaIz = sumaIz + a.izdato;
+                    sumaVr += a.vraceno;
+                }
             }
-        }*/
+            lblIzdato.Text = Convert.ToString(sumaIz);
+            lblVraceno.Text = Convert.ToString(sumaVr);
+            lblStanje.Text = Convert.ToString(sumaIz - sumaVr);
+        }
     }
 }

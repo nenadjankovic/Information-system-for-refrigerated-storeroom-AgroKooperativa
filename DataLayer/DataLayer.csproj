@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AmbalazaRepository.cs" />
+    <Compile Include="AvansRepository.cs" />
     <Compile Include="CenaRepository.cs" />
     <Compile Include="Konstante.cs" />
     <Compile Include="KorisnikRepository.cs" />
     <Compile Include="Models\Ambalaza.cs" />
+    <Compile Include="Models\Avansi.cs" />
     <Compile Include="Models\Cena.cs" />
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\Otkup.cs" />

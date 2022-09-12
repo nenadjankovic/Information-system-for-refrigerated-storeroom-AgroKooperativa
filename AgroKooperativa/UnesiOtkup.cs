@@ -85,6 +85,7 @@ namespace AgroKooperativa
             Otkup o = new Otkup();
 
             o.KolicinaIKlase = Convert.ToDecimal(txtKolicinaIKlase.Text);
+            txtKoličinaIIKlase.Text = "0";
             o.KolicinaIIKlase = Convert.ToDecimal(txtKoličinaIIKlase.Text);
             o.Datum = dtpOtkup.Value;
             o.IDVoca = odrediVoce().IDVoca;

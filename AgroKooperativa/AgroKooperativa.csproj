@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avans.Designer.cs">
+      <DependentUpon>Avans.cs</DependentUpon>
+    </Compile>
     <Compile Include="CenaVoca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
       <DependentUpon>ProizvodjacUnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Avans.resx">
+      <DependentUpon>Avans.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CenaVoca.resx">
       <DependentUpon>CenaVoca.cs</DependentUpon>
     </EmbeddedResource>

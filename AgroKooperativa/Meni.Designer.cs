@@ -62,6 +62,7 @@
             this.Name = "Meni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meni";
+            this.Load += new System.EventHandler(this.Meni_Load);
             this.ResumeLayout(false);
 
         }
