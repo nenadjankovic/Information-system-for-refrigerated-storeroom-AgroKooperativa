@@ -23,5 +23,33 @@ namespace DataLayer
 
             }
         }
+
+        public List<Otkup> GetAllOtkup()
+        {
+            List<Otkup> result = new List<Otkup>();
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "SELECT * FROM Otkup";
+                sqlConnection.Open();
+
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    Otkup p = new Otkup();
+                    p.idOtkupa = sqlDataReader.GetInt32(0);
+                    p.KolicinaIKlase = sqlDataReader.GetDecimal(1);
+                    p.KolicinaIIKlase = sqlDataReader.GetDecimal(2);
+                    p.Datum = sqlDataReader.GetDateTime(3);
+                    p.IDVoca = sqlDataReader.GetInt32(4);
+                    p.idProizvodjaca = sqlDataReader.GetInt32(5);
+
+                    result.Add(p);
+                }
+                return result;
+            }
+        }
     }
 }

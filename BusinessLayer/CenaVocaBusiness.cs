@@ -11,22 +11,27 @@ namespace BusinessLayer
 {
     public class CenaVocaBusiness
     {
-        private readonly CenaVocaRepository cenaVocaRepository;
+        private readonly CenaRepository cenaRepository;
         public CenaVocaBusiness()
         {
-            this.cenaVocaRepository = new CenaVocaRepository();
-        }
+            this.cenaRepository = new CenaRepository();
+        }                                                       
         public DataTable ucitajCeneVoca()
         {
-            return this.cenaVocaRepository.ucitajCeneVoca();
+            return this.cenaRepository.ucitajCeneVoca();
         }
 
         public bool UpdateCenuVoca(Cena c)
         {
-            if (this.cenaVocaRepository.UpdateCenuVoca(c) > 0)
+            if (this.cenaRepository.UpdateCenuVoca(c) > 0)
                 return true;
             else
                 return false;
+        }
+
+        public List<Cena> GetAllCena()
+        {
+            return this.cenaRepository.GetAllCena();
         }
     }
 }

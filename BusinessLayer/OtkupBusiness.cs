@@ -24,5 +24,10 @@ namespace BusinessLayer
             else
                 return false;
         }
+
+        public List<Otkup> GetAllOtkup()
+        {
+            return this.otkupRepository.GetAllOtkup();
+        }
     }
 }

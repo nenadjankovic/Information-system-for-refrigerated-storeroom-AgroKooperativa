@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AmbalazaRepository.cs" />
-    <Compile Include="CenaVocaRepository.cs" />
+    <Compile Include="CenaRepository.cs" />
     <Compile Include="Konstante.cs" />
     <Compile Include="KorisnikRepository.cs" />
     <Compile Include="Models\Ambalaza.cs" />

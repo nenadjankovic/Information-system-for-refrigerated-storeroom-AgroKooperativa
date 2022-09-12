@@ -15,11 +15,11 @@ namespace AgroKooperativa
 {
     public partial class CenaVoca : Form
     {
-        private readonly CenaVocaRepository cenaVocaRepository;
+        private readonly CenaRepository cenaVocaRepository;
         private readonly CenaVocaBusiness cenaVocaBusiness;
         public CenaVoca()
         {
-            this.cenaVocaRepository = new CenaVocaRepository();
+            this.cenaVocaRepository = new CenaRepository();
             this.cenaVocaBusiness = new CenaVocaBusiness();
             InitializeComponent();
         }

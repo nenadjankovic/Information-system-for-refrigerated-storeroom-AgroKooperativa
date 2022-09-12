@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class CenaVocaRepository
+    public class CenaRepository
     {
-        public List<Cena> GetAllCenaVoca()
+        public List<Cena> GetAllCena()
         {
             List<Cena> result = new List<Cena>();
 
@@ -59,11 +59,12 @@ namespace DataLayer
                 sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
-            sqlCommand.CommandText = string.Format("UPDATE CeneVoca SET  CenaIKlase=@p1 , CenaIIKlase=@p2 , Datum=@p3  WHERE idCeneVoca=@p4");
-            sqlCommand.Parameters.Add("p1", c.CenaIKlase);
+            sqlCommand.CommandText = string.Format("UPDATE CeneVoca SET  CenaIKlase={0} , CenaIIKlase={1} , Datum='{2}'  WHERE idCeneVoca={3}",
+                c.CenaIKlase, c.CenaIIKlase,c.Datum, c.FK_IDVoca);
+            /*sqlCommand.Parameters.Add("p1", c.CenaIKlase);
             sqlCommand.Parameters.Add("p2", c.CenaIIKlase);
             sqlCommand.Parameters.Add("p3", c.Datum);
-            sqlCommand.Parameters.Add("p4", c.FK_IDVoca);
+            sqlCommand.Parameters.Add("p4", c.FK_IDVoca);*/
             
 
 

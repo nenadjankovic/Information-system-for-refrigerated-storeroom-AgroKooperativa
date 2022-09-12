@@ -70,6 +70,12 @@
     <Compile Include="Meni.Designer.cs">
       <DependentUpon>Meni.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrikazStanjaOtkupa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazStanjaOtkupa.Designer.cs">
+      <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UnesiOtkup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Meni.resx">
       <DependentUpon>Meni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikazStanjaOtkupa.resx">
+      <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnesiOtkup.resx">
       <DependentUpon>UnesiOtkup.cs</DependentUpon>
