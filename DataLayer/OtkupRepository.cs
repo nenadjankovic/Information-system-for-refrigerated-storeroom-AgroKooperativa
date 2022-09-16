@@ -1,6 +1,7 @@
 ﻿using DataLayer.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,18 @@ namespace DataLayer
                     result.Add(p);
                 }
                 return result;
+            }
+        }
+
+        public DataTable ucitajOtkup()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(Konstante.connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Proizvodjaci.ime, Proizvodjaci.Prezime, , Avansi.Datum, Avansi.Suma FROM Avansi INNER JOIN Proizvodjaci ON Avansi.idProizvodjaca = Proizvodjaci.idProizvodjaca", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                return dtbl;
             }
         }
     }

@@ -21,6 +21,7 @@ namespace AgroKooperativa
         public UnesiOtkup()
         {
             InitializeComponent();
+          
             this.proizvodjacBusiness = new ProizvodjacBusiness();
             this.voceBusiness = new VoceBusiness();
             this.otkupBusiness = new OtkupBusiness();   
@@ -30,6 +31,7 @@ namespace AgroKooperativa
         private void UnesiOtkup_Load(object sender, EventArgs e)
         {
             fillComboBox();
+            
         }
         public void fillComboBox()
         {
@@ -45,6 +47,11 @@ namespace AgroKooperativa
             {
                 cbVoce.Items.Add(v.Naziv);
             }
+            txtKoličinaIIKlase.Text = "0";
+            txtKolicinaIKlase.Text = "0";
+            txtIzdato.Text = "0";
+            txtVraćeno.Text = "0";
+            
         }
 
         public Voce odrediVoce()
@@ -82,10 +89,12 @@ namespace AgroKooperativa
 
         private void btnUnesi_Click(object sender, EventArgs e)
         {
+
+
             Otkup o = new Otkup();
 
             o.KolicinaIKlase = Convert.ToDecimal(txtKolicinaIKlase.Text);
-            txtKoličinaIIKlase.Text = "0";
+            
             o.KolicinaIIKlase = Convert.ToDecimal(txtKoličinaIIKlase.Text);
             o.Datum = dtpOtkup.Value;
             o.IDVoca = odrediVoce().IDVoca;
@@ -104,6 +113,7 @@ namespace AgroKooperativa
             a.vraceno = Convert.ToInt32(txtVraćeno.Text);
             a.izdato = Convert.ToInt32(txtIzdato.Text);
             a.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
+            a.datum = dtpOtkup.Value;
 
             if (this.ambalazaBusiness.InsertAmbalaza(a))
             {
@@ -114,5 +124,31 @@ namespace AgroKooperativa
                 MessageBox.Show("Neuspešno zavedena ambalaža");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStanjeOtkupa_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new PrikazStanjaOtkupa();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
+
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new Meni();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
+
+
+
+
+
     }
 }

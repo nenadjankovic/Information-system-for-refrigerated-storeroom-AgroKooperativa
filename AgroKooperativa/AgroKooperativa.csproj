@@ -58,12 +58,6 @@
     <Compile Include="CenaVoca.Designer.cs">
       <DependentUpon>CenaVoca.cs</DependentUpon>
     </Compile>
-    <Compile Include="IzmeniCenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IzmeniCenu.Designer.cs">
-      <DependentUpon>IzmeniCenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +75,18 @@
     </Compile>
     <Compile Include="PrikazStanjaOtkupa.Designer.cs">
       <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UkupnoStanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UkupnoStanje.Designer.cs">
+      <DependentUpon>UkupnoStanje.cs</DependentUpon>
     </Compile>
     <Compile Include="UnesiOtkup.cs">
       <SubType>Form</SubType>
@@ -108,9 +114,6 @@
     <EmbeddedResource Include="CenaVoca.resx">
       <DependentUpon>CenaVoca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IzmeniCenu.resx">
-      <DependentUpon>IzmeniCenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrikazStanjaOtkupa.resx">
       <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UkupnoStanje.resx">
+      <DependentUpon>UkupnoStanje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnesiOtkup.resx">
       <DependentUpon>UnesiOtkup.cs</DependentUpon>

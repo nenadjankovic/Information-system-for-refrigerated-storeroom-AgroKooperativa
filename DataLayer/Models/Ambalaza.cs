@@ -12,5 +12,6 @@ namespace DataLayer.Models
         public int izdato { get; set; }
         public int vraceno { get; set; }
         public int idProizvodjaca { get; set; }
+        public DateTime datum { get; set; }
     }
 }

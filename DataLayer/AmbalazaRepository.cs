@@ -45,7 +45,7 @@ namespace DataLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Ambalaza VALUES({0},{1},{2})", a.izdato, a.vraceno, a.idProizvodjaca);
+                sqlCommand.CommandText = string.Format("INSERT INTO Ambalaza VALUES({0},{1},{2},'{3}')", a.izdato, a.vraceno, a.idProizvodjaca, a.datum);
 
                 return sqlCommand.ExecuteNonQuery();
 

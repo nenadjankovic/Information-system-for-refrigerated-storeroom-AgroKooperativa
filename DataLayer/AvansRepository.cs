@@ -18,7 +18,7 @@ namespace DataLayer
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT * FROM Avans";
+                sqlCommand.CommandText = "SELECT * FROM Avansi";
                 sqlConnection.Open();
 
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
@@ -76,5 +76,20 @@ namespace DataLayer
                 return sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public int DeleteAvans(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("DELETE FROM Avansi WHERE Avansi.idAvans = {0}",
+                    id);
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
+
     }
 }

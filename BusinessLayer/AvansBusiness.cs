@@ -42,5 +42,11 @@ namespace BusinessLayer
                 return true;
             return false;
         }
+        public bool DeleteAvans(int id)
+        {
+            if (this.avansRepository.DeleteAvans(id) > 0)
+                return true;
+            return false;
+        }
     }
 }

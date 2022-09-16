@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using DataLayer;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace AgroKooperativa
         private void Proizvodjaci_Load(object sender, EventArgs e)
         {
             ucitajProizvodjace();
+            fillCombo();
         }
 
         private void btnUcitaj_Click(object sender, EventArgs e)
@@ -64,18 +66,28 @@ namespace AgroKooperativa
 
         private void btnObriši_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtIDzaBrisanje.Text);
-            if (proizvodjacBusiness.DeleteProizovdjac(id)) { 
-                MessageBox.Show("Uspešno obrisan izlaz!");
-                ucitajProizvodjace();
-            }
-            else
+            try
             {
-                MessageBox.Show("Pogrešan ID!");
-                txtIDzaBrisanje.Clear();
+
+                if(cbPr.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Morate selektovati proizvođača u padajućoj listi!");
+                }
+                else
+                {
+                    if (this.proizvodjacBusiness.DeleteProizovdjac(odrediProizvodjaca().idProizvodjaca))
+                    {
+                        MessageBox.Show("Uspešno obrisan proizvođač!");
+                    }
+                   
+                }
                 ucitajProizvodjace();
             }
-            txtIDzaBrisanje.Clear();
+            catch (Exception)
+            {
+                MessageBox.Show("Ne mozete obrisati ovog proizvođača!");
+            }
+           
         }
 
         private void btnNazad_Click(object sender, EventArgs e)
@@ -84,6 +96,46 @@ namespace AgroKooperativa
             var m = new Meni();
             m.Closed += (s, args) => this.Close();
             m.Show();
+        }
+
+        private void txtIDzaBrisanje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if(!Char.IsDigit(c) && c != 8 && c != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void gbObrisi_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public void fillCombo()
+        {
+            List<Proizvodjac> proizvodjaci = this.proizvodjacBusiness.GetAllProizvodjac();
+            foreach (Proizvodjac p in proizvodjaci)
+            {
+                cbPr.Items.Add(p.idProizvodjaca + " " + p.ime + " " + p.prezime);
+            }
+        }
+        public Proizvodjac odrediProizvodjaca()
+        {
+            List<Proizvodjac> proizvodjaci = this.proizvodjacBusiness.GetAllProizvodjac();
+            Proizvodjac result = new Proizvodjac();
+            string IDImePrezimeProizvodjaca = cbPr.GetItemText(cbPr.SelectedItem);
+            string IDProizvodjacaSTR = IDImePrezimeProizvodjaca.Substring(0, IDImePrezimeProizvodjaca.IndexOf(" "));
+            int idPr = Convert.ToInt32(IDProizvodjacaSTR);
+            foreach (Proizvodjac p in proizvodjaci)
+            {
+                if (p.idProizvodjaca == idPr)
+                {
+                    result = p;
+                }
+            }
+            return result;
+
         }
     }
 }

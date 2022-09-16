@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnPotvrdi = new System.Windows.Forms.Button();
             this.lblIme = new System.Windows.Forms.Label();
             this.lblPrezime = new System.Windows.Forms.Label();
@@ -40,6 +41,16 @@
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtBPG = new System.Windows.Forms.TextBox();
             this.btnNazad = new System.Windows.Forms.Button();
+            this.errIme = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errPrezime = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errTelefon = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errBPG = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errMesto = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errIme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPrezime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errTelefon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBPG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMesto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPotvrdi
@@ -138,9 +149,29 @@
             this.btnNazad.Name = "btnNazad";
             this.btnNazad.Size = new System.Drawing.Size(75, 23);
             this.btnNazad.TabIndex = 13;
-            this.btnNazad.Text = "Izađi";
+            this.btnNazad.Text = "Nazad";
             this.btnNazad.UseVisualStyleBackColor = true;
             this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
+            // 
+            // errIme
+            // 
+            this.errIme.ContainerControl = this;
+            // 
+            // errPrezime
+            // 
+            this.errPrezime.ContainerControl = this;
+            // 
+            // errTelefon
+            // 
+            this.errTelefon.ContainerControl = this;
+            // 
+            // errBPG
+            // 
+            this.errBPG.ContainerControl = this;
+            // 
+            // errMesto
+            // 
+            this.errMesto.ContainerControl = this;
             // 
             // ProizvodjacUnos
             // 
@@ -165,6 +196,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unos proizvođača";
             this.Load += new System.EventHandler(this.ProizvodjacUnos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errIme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPrezime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errTelefon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBPG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMesto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +220,10 @@
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.TextBox txtBPG;
         private System.Windows.Forms.Button btnNazad;
+        private System.Windows.Forms.ErrorProvider errIme;
+        private System.Windows.Forms.ErrorProvider errPrezime;
+        private System.Windows.Forms.ErrorProvider errTelefon;
+        private System.Windows.Forms.ErrorProvider errBPG;
+        private System.Windows.Forms.ErrorProvider errMesto;
     }
 }

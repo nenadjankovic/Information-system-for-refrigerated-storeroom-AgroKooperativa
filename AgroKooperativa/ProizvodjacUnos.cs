@@ -27,16 +27,70 @@ namespace AgroKooperativa
 
         private void ProizvodjacUnos_Load(object sender, EventArgs e)
         {
-
+            txtMesto.Text = null;
+             
         }
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
+            //validacija ime
+
+            if (string.IsNullOrEmpty(txtIme.Text.Trim()))
+            {
+                errIme.SetError(txtIme, "Polje ime je obavezno!");
+                return;
+            }
+            else
+            {
+                errIme.SetError(txtIme, string.Empty);
+            }
+
+            //validacija prezime
+
+            if (string.IsNullOrEmpty(txtPrezime.Text.Trim()))
+            {
+                errPrezime.SetError(txtPrezime, "Polje prezime je obavezno!");
+                return;
+            }
+            else
+            {
+                errPrezime.SetError(txtPrezime, string.Empty);
+            }
+
+            
+
+            if (string.IsNullOrEmpty(txtTelefon.Text.Trim()))
+            {
+                errTelefon.SetError(txtTelefon, "Polje telefon je obavezno!");
+                return;
+            }
+            else
+            {
+                errTelefon.SetError(txtTelefon, string.Empty);
+            }
+
+            if (string.IsNullOrEmpty(txtBPG.Text.Trim()))
+            {
+                errBPG.SetError(txtBPG, "Polje BPG je obavezno!");
+                return;
+            }
+            else
+            {
+                errBPG.SetError(txtBPG, string.Empty);
+            }
+
             Proizvodjac p = new Proizvodjac();
 
             p.ime = txtIme.Text;
             p.prezime = txtPrezime.Text;
-            p.mesto = txtMesto.Text;
+            if (string.IsNullOrEmpty(txtMesto.Text))
+            {
+                p.mesto = " ";
+            }
+            else
+            {
+                p.mesto = txtMesto.Text;
+            }            
             p.telefon = txtTelefon.Text;
             p.BPG = Convert.ToInt64(txtBPG.Text);
 

@@ -30,13 +30,16 @@
         {
             this.btnProizvodjaci = new System.Windows.Forms.Button();
             this.btnCenaVoca = new System.Windows.Forms.Button();
+            this.btnOtkup = new System.Windows.Forms.Button();
+            this.btnUkupnoStanje = new System.Windows.Forms.Button();
+            this.btnAvans = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProizvodjaci
             // 
-            this.btnProizvodjaci.Location = new System.Drawing.Point(93, 99);
+            this.btnProizvodjaci.Location = new System.Drawing.Point(2, 12);
             this.btnProizvodjaci.Name = "btnProizvodjaci";
-            this.btnProizvodjaci.Size = new System.Drawing.Size(75, 50);
+            this.btnProizvodjaci.Size = new System.Drawing.Size(150, 113);
             this.btnProizvodjaci.TabIndex = 0;
             this.btnProizvodjaci.Text = "Proizvođači";
             this.btnProizvodjaci.UseVisualStyleBackColor = true;
@@ -44,19 +47,52 @@
             // 
             // btnCenaVoca
             // 
-            this.btnCenaVoca.Location = new System.Drawing.Point(192, 99);
+            this.btnCenaVoca.Location = new System.Drawing.Point(158, 12);
             this.btnCenaVoca.Name = "btnCenaVoca";
-            this.btnCenaVoca.Size = new System.Drawing.Size(75, 50);
+            this.btnCenaVoca.Size = new System.Drawing.Size(150, 113);
             this.btnCenaVoca.TabIndex = 1;
             this.btnCenaVoca.Text = "Cena voća";
             this.btnCenaVoca.UseVisualStyleBackColor = true;
             this.btnCenaVoca.Click += new System.EventHandler(this.btnCenaVoca_Click);
+            // 
+            // btnOtkup
+            // 
+            this.btnOtkup.Location = new System.Drawing.Point(2, 131);
+            this.btnOtkup.Name = "btnOtkup";
+            this.btnOtkup.Size = new System.Drawing.Size(150, 113);
+            this.btnOtkup.TabIndex = 3;
+            this.btnOtkup.Text = "Otkup";
+            this.btnOtkup.UseVisualStyleBackColor = true;
+            this.btnOtkup.Click += new System.EventHandler(this.btnOtkup_Click);
+            // 
+            // btnUkupnoStanje
+            // 
+            this.btnUkupnoStanje.Location = new System.Drawing.Point(158, 131);
+            this.btnUkupnoStanje.Name = "btnUkupnoStanje";
+            this.btnUkupnoStanje.Size = new System.Drawing.Size(150, 113);
+            this.btnUkupnoStanje.TabIndex = 4;
+            this.btnUkupnoStanje.Text = "Saldo";
+            this.btnUkupnoStanje.UseVisualStyleBackColor = true;
+            this.btnUkupnoStanje.Click += new System.EventHandler(this.btnUkupnoStanje_Click);
+            // 
+            // btnAvans
+            // 
+            this.btnAvans.Location = new System.Drawing.Point(314, 12);
+            this.btnAvans.Name = "btnAvans";
+            this.btnAvans.Size = new System.Drawing.Size(150, 113);
+            this.btnAvans.TabIndex = 5;
+            this.btnAvans.Text = "Avans";
+            this.btnAvans.UseVisualStyleBackColor = true;
+            this.btnAvans.Click += new System.EventHandler(this.btnAvans_Click);
             // 
             // Meni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAvans);
+            this.Controls.Add(this.btnUkupnoStanje);
+            this.Controls.Add(this.btnOtkup);
             this.Controls.Add(this.btnCenaVoca);
             this.Controls.Add(this.btnProizvodjaci);
             this.Name = "Meni";
@@ -71,5 +107,8 @@
 
         private System.Windows.Forms.Button btnProizvodjaci;
         private System.Windows.Forms.Button btnCenaVoca;
+        private System.Windows.Forms.Button btnOtkup;
+        private System.Windows.Forms.Button btnUkupnoStanje;
+        private System.Windows.Forms.Button btnAvans;
     }
 }

@@ -27,40 +27,68 @@ namespace AgroKooperativa
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void btnPrijaviSe_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txtUsername.Text.Trim()))
+            {
+                errorProvider1.SetError(txtUsername, "Korisničko ime je obavezno polje!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsername, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtLozinka.Text.Trim()))
+            {
+                errorProvider2.SetError(txtLozinka, "Morate uneti lozinku!");
+                return;
+            }
+            else
+            {
+                errorProvider2.SetError(txtLozinka, string.Empty);
+            }
+
+
             string username = txtUsername.Text;
             string lozinka = txtLozinka.Text;
 
-            List<Korisnik> korisnici = this.korisnikBusiness.GetAllKorisnici();
+          
 
-
-            foreach (Korisnik k in korisnici)
+            if(this.korisnikBusiness.loginData(username,lozinka).Rows.Count == 1)
             {
-                if (k.korisnickoIme == username && k.lozinka == lozinka)
-                {
-                    this.Hide();
-                    var m = new Meni();
-                    m.Closed += (s, args) => this.Close();
-                    m.Show();
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("Pogresna loznka ili username!");
-                    txtUsername.Clear();
-                    txtLozinka.Clear();
-                    break;
-                }
+                this.Hide();
+                var m = new Meni();
+                m.Closed += (s, args) => this.Close();
+                m.Show();
+
+                txtUsername.Clear();
+                txtLozinka.Clear();
+                
             }
+            else
+            {
+                MessageBox.Show("Pogrešno uneti podaci za prijavu!");
+            }
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void btnRegistrujse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new Registracija();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
+
+        
     }
 }

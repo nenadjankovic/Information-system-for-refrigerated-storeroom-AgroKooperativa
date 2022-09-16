@@ -37,5 +37,34 @@ namespace AgroKooperativa
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOtkup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new UnesiOtkup();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
+
+        private void btnAvans_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new Avans();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
+
+        private void btnUkupnoStanje_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new UkupnoStanje();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
     }
 }

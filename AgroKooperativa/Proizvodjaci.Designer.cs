@@ -38,9 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDodajProizvodjaca = new System.Windows.Forms.Button();
             this.gbObrisi = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbPr = new System.Windows.Forms.ComboBox();
             this.btnObriši = new System.Windows.Forms.Button();
-            this.lblUnesiID = new System.Windows.Forms.Label();
-            this.txtIDzaBrisanje = new System.Windows.Forms.TextBox();
             this.btnNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProizvodjaci)).BeginInit();
             this.gbObrisi.SuspendLayout();
@@ -112,6 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(172, 4);
             this.label1.Name = "label1";
@@ -121,59 +122,67 @@
             // 
             // btnDodajProizvodjaca
             // 
-            this.btnDodajProizvodjaca.Location = new System.Drawing.Point(507, 36);
+            this.btnDodajProizvodjaca.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnDodajProizvodjaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajProizvodjaca.Location = new System.Drawing.Point(479, 25);
             this.btnDodajProizvodjaca.Name = "btnDodajProizvodjaca";
-            this.btnDodajProizvodjaca.Size = new System.Drawing.Size(75, 42);
+            this.btnDodajProizvodjaca.Size = new System.Drawing.Size(194, 53);
             this.btnDodajProizvodjaca.TabIndex = 3;
             this.btnDodajProizvodjaca.Text = "Dodaj proizvođača";
-            this.btnDodajProizvodjaca.UseVisualStyleBackColor = true;
+            this.btnDodajProizvodjaca.UseVisualStyleBackColor = false;
             this.btnDodajProizvodjaca.Click += new System.EventHandler(this.btnDodajProizvodjaca_Click);
             // 
             // gbObrisi
             // 
-            this.gbObrisi.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.gbObrisi.BackColor = System.Drawing.Color.Bisque;
+            this.gbObrisi.Controls.Add(this.label2);
+            this.gbObrisi.Controls.Add(this.cbPr);
             this.gbObrisi.Controls.Add(this.btnObriši);
-            this.gbObrisi.Controls.Add(this.lblUnesiID);
-            this.gbObrisi.Controls.Add(this.txtIDzaBrisanje);
-            this.gbObrisi.Location = new System.Drawing.Point(479, 93);
+            this.gbObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbObrisi.ForeColor = System.Drawing.Color.Black;
+            this.gbObrisi.Location = new System.Drawing.Point(479, 84);
             this.gbObrisi.Name = "gbObrisi";
-            this.gbObrisi.Size = new System.Drawing.Size(137, 132);
+            this.gbObrisi.Size = new System.Drawing.Size(200, 156);
             this.gbObrisi.TabIndex = 4;
             this.gbObrisi.TabStop = false;
             this.gbObrisi.Text = "Obriši proizvođača";
+            this.gbObrisi.Enter += new System.EventHandler(this.gbObrisi_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Odaberite proizvođača";
+            // 
+            // cbPr
+            // 
+            this.cbPr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPr.FormattingEnabled = true;
+            this.cbPr.Location = new System.Drawing.Point(7, 66);
+            this.cbPr.Name = "cbPr";
+            this.cbPr.Size = new System.Drawing.Size(187, 21);
+            this.cbPr.TabIndex = 3;
             // 
             // btnObriši
             // 
-            this.btnObriši.Location = new System.Drawing.Point(23, 95);
+            this.btnObriši.BackColor = System.Drawing.Color.IndianRed;
+            this.btnObriši.ForeColor = System.Drawing.Color.Black;
+            this.btnObriši.Location = new System.Drawing.Point(9, 105);
             this.btnObriši.Name = "btnObriši";
-            this.btnObriši.Size = new System.Drawing.Size(75, 23);
+            this.btnObriši.Size = new System.Drawing.Size(185, 36);
             this.btnObriši.TabIndex = 2;
-            this.btnObriši.Text = "Obriši";
-            this.btnObriši.UseVisualStyleBackColor = true;
+            this.btnObriši.Text = "Obriši proizvođača";
+            this.btnObriši.UseVisualStyleBackColor = false;
             this.btnObriši.Click += new System.EventHandler(this.btnObriši_Click);
-            // 
-            // lblUnesiID
-            // 
-            this.lblUnesiID.AutoSize = true;
-            this.lblUnesiID.Location = new System.Drawing.Point(15, 27);
-            this.lblUnesiID.MaximumSize = new System.Drawing.Size(100, 100);
-            this.lblUnesiID.Name = "lblUnesiID";
-            this.lblUnesiID.Size = new System.Drawing.Size(98, 39);
-            this.lblUnesiID.TabIndex = 1;
-            this.lblUnesiID.Text = "Unesite ID proizvođača kojeg želite da obrišete:";
-            // 
-            // txtIDzaBrisanje
-            // 
-            this.txtIDzaBrisanje.Location = new System.Drawing.Point(18, 69);
-            this.txtIDzaBrisanje.Name = "txtIDzaBrisanje";
-            this.txtIDzaBrisanje.Size = new System.Drawing.Size(100, 20);
-            this.txtIDzaBrisanje.TabIndex = 0;
             // 
             // btnNazad
             // 
-            this.btnNazad.Location = new System.Drawing.Point(512, 244);
+            this.btnNazad.Location = new System.Drawing.Point(528, 246);
             this.btnNazad.Name = "btnNazad";
-            this.btnNazad.Size = new System.Drawing.Size(75, 23);
+            this.btnNazad.Size = new System.Drawing.Size(113, 33);
             this.btnNazad.TabIndex = 5;
             this.btnNazad.Text = "Nazad";
             this.btnNazad.UseVisualStyleBackColor = true;
@@ -183,7 +192,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 291);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(691, 291);
             this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.gbObrisi);
             this.Controls.Add(this.btnDodajProizvodjaca);
@@ -208,8 +218,6 @@
         private System.Windows.Forms.Button btnDodajProizvodjaca;
         private System.Windows.Forms.GroupBox gbObrisi;
         private System.Windows.Forms.Button btnObriši;
-        private System.Windows.Forms.Label lblUnesiID;
-        private System.Windows.Forms.TextBox txtIDzaBrisanje;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
@@ -217,5 +225,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn BPG;
         private System.Windows.Forms.Button btnNazad;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbPr;
     }
 }
