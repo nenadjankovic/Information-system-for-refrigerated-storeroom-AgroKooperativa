@@ -28,6 +28,10 @@ namespace AgroKooperativa
         {
             dgwAvans.DataSource = this.avansBusiness.ucitajAvans();
             fillCombo();
+            txtSuma.ShortcutsEnabled = false;
+            txtID.ShortcutsEnabled = false;
+            txtIDObrisi.ShortcutsEnabled = false;
+            txtSumaIzmeni.ShortcutsEnabled = false;
         }
 
         public void fillCombo()
@@ -216,6 +220,42 @@ namespace AgroKooperativa
             var m = new Meni();
             m.Closed += (s, args) => this.Close();
             m.Show();
+        }
+
+        private void txtSuma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if(!char.IsDigit(ch) && ch!= 8 && ch!= 46 && ch!= 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSumaIzmeni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIDObrisi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

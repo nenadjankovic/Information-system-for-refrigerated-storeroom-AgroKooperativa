@@ -18,7 +18,7 @@ namespace DataLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Otkup VALUES({0},{1},'{2}',{3},{4})", o.KolicinaIKlase, o.KolicinaIIKlase, o.Datum, o.IDVoca, o.idProizvodjaca);
+                sqlCommand.CommandText = string.Format("INSERT INTO Otkup VALUES({0},{1},{2},{3},{4},'{5}',{6},{7})", o.BrutoKolicinaIKlase, o.BrutoKolicinaIIKlase,o.NetoKolicinaIKlase,o.NetoKolicinaIIKlase,o.Tara, o.Datum, o.IDVoca, o.idProizvodjaca);
 
                 return sqlCommand.ExecuteNonQuery();
 
@@ -41,11 +41,14 @@ namespace DataLayer
                 {
                     Otkup p = new Otkup();
                     p.idOtkupa = sqlDataReader.GetInt32(0);
-                    p.KolicinaIKlase = sqlDataReader.GetDecimal(1);
-                    p.KolicinaIIKlase = sqlDataReader.GetDecimal(2);
-                    p.Datum = sqlDataReader.GetDateTime(3);
-                    p.IDVoca = sqlDataReader.GetInt32(4);
-                    p.idProizvodjaca = sqlDataReader.GetInt32(5);
+                    p.BrutoKolicinaIKlase = sqlDataReader.GetDecimal(1);
+                    p.BrutoKolicinaIIKlase = sqlDataReader.GetDecimal(2);
+                    p.NetoKolicinaIKlase = sqlDataReader.GetDecimal(3);
+                    p.NetoKolicinaIIKlase = sqlDataReader.GetDecimal(4);
+                    p.Tara = sqlDataReader.GetDecimal(5);
+                    p.Datum = sqlDataReader.GetDateTime(6);
+                    p.IDVoca = sqlDataReader.GetInt32(7);
+                    p.idProizvodjaca = sqlDataReader.GetInt32(8);
 
                     result.Add(p);
                 }
@@ -58,7 +61,7 @@ namespace DataLayer
             using (SqlConnection sqlCon = new SqlConnection(Konstante.connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Proizvodjaci.ime, Proizvodjaci.Prezime, , Avansi.Datum, Avansi.Suma FROM Avansi INNER JOIN Proizvodjaci ON Avansi.idProizvodjaca = Proizvodjaci.idProizvodjaca", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Proizvodjaci.ime, Proizvodjaci.Prezime, Voce.Naziv, Otkup.BrutoKolicinaIKlase, Otkup.BrutoKolicinaIIKlase, Otkup.NetoKolicinaIKlase, Otkup.NetoKolicinaIIKlase, Otkup.Tara, Otkup.Datum FROM Otkup INNER JOIN Proizvodjaci ON Otkup.idProizvodjaca = Proizvodjaci.idProizvodjaca INNER JOIN Voce ON Otkup.IDVoca = Voce.IDVoca", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 return dtbl;

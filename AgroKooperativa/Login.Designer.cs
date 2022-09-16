@@ -40,6 +40,7 @@
             this.btnRegistrujse = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -47,74 +48,85 @@
             // 
             // btnPrijaviSe
             // 
-            this.btnPrijaviSe.Location = new System.Drawing.Point(71, 191);
+            this.btnPrijaviSe.Image = ((System.Drawing.Image)(resources.GetObject("btnPrijaviSe.Image")));
+            this.btnPrijaviSe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrijaviSe.Location = new System.Drawing.Point(176, 141);
             this.btnPrijaviSe.Name = "btnPrijaviSe";
-            this.btnPrijaviSe.Size = new System.Drawing.Size(75, 23);
+            this.btnPrijaviSe.Size = new System.Drawing.Size(85, 38);
             this.btnPrijaviSe.TabIndex = 0;
             this.btnPrijaviSe.Text = "Pijavi se";
+            this.btnPrijaviSe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrijaviSe.UseVisualStyleBackColor = true;
             this.btnPrijaviSe.Click += new System.EventHandler(this.btnPrijaviSe_Click);
             // 
             // btnIzadji
             // 
-            this.btnIzadji.Location = new System.Drawing.Point(71, 248);
+            this.btnIzadji.Image = ((System.Drawing.Image)(resources.GetObject("btnIzadji.Image")));
+            this.btnIzadji.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIzadji.Location = new System.Drawing.Point(231, 185);
             this.btnIzadji.Name = "btnIzadji";
-            this.btnIzadji.Size = new System.Drawing.Size(75, 23);
+            this.btnIzadji.Size = new System.Drawing.Size(65, 38);
             this.btnIzadji.TabIndex = 1;
             this.btnIzadji.Text = "Izađi";
+            this.btnIzadji.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIzadji.UseVisualStyleBackColor = true;
             this.btnIzadji.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(93, 137);
+            this.txtUsername.Location = new System.Drawing.Point(252, 70);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(115, 20);
             this.txtUsername.TabIndex = 2;
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(93, 165);
+            this.txtLozinka.Location = new System.Drawing.Point(252, 109);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.PasswordChar = '*';
-            this.txtLozinka.Size = new System.Drawing.Size(100, 20);
+            this.txtLozinka.Size = new System.Drawing.Size(115, 20);
             this.txtLozinka.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 140);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Korisničko ime:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 168);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(158, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Lozinka:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(140, 191);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // btnRegistrujse
             // 
-            this.btnRegistrujse.Location = new System.Drawing.Point(71, 219);
+            this.btnRegistrujse.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrujse.Image")));
+            this.btnRegistrujse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrujse.Location = new System.Drawing.Point(267, 141);
             this.btnRegistrujse.Name = "btnRegistrujse";
-            this.btnRegistrujse.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrujse.Size = new System.Drawing.Size(97, 38);
             this.btnRegistrujse.TabIndex = 7;
             this.btnRegistrujse.Text = "Registruj se";
+            this.btnRegistrujse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrujse.UseVisualStyleBackColor = true;
             this.btnRegistrujse.Click += new System.EventHandler(this.btnRegistrujse_Click);
             // 
@@ -126,11 +138,23 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorProvider2.SetIconAlignment(this.label3, System.Windows.Forms.ErrorIconAlignment.TopLeft);
+            this.label3.Location = new System.Drawing.Point(176, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "AgroKooperativa";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 283);
+            this.ClientSize = new System.Drawing.Size(390, 231);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegistrujse);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -166,5 +190,6 @@
         private System.Windows.Forms.Button btnRegistrujse;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Label label3;
     }
 }

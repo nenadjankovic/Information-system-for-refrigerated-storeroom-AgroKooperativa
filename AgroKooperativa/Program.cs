@@ -16,7 +16,7 @@ namespace AgroKooperativa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProizvodjacUnos());
+            Application.Run(new Login());
         }
     }
 }

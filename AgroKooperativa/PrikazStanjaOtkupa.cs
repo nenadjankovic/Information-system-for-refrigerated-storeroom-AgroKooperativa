@@ -69,8 +69,8 @@ namespace AgroKooperativa
                 {
                     if (o.idProizvodjaca == idProizvodjaca && o.IDVoca == idVoca)
                     {
-                        sumaI += o.KolicinaIKlase;
-                        sumaII += o.KolicinaIIKlase;
+                        sumaI += o.NetoKolicinaIKlase;
+                        sumaII += o.NetoKolicinaIIKlase;
                     }
 
                 }

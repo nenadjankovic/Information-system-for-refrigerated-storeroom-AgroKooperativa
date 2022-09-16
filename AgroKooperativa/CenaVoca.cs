@@ -114,5 +114,23 @@ namespace AgroKooperativa
 
             }
         }
+
+        private void txtCena1klase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCena2klase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

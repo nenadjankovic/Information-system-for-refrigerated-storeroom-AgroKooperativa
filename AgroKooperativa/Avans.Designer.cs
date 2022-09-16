@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Avans));
             this.dgwAvans = new System.Windows.Forms.DataGridView();
             this.idavans = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +57,11 @@
             this.btnObriši = new System.Windows.Forms.Button();
             this.txtIDObrisi = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnNazad = new System.Windows.Forms.Button();
             this.btnUcitajUk = new System.Windows.Forms.Button();
             this.lblUkAvansa = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbPRpojedinacno = new System.Windows.Forms.ComboBox();
-            this.btnNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAvans)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,8 +81,8 @@
             this.dgwAvans.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgwAvans.Location = new System.Drawing.Point(12, 22);
             this.dgwAvans.Name = "dgwAvans";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dgwAvans.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgwAvans.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgwAvans.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgwAvans.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgwAvans.Size = new System.Drawing.Size(427, 362);
@@ -126,6 +126,7 @@
             this.txtSuma.Name = "txtSuma";
             this.txtSuma.Size = new System.Drawing.Size(121, 20);
             this.txtSuma.TabIndex = 1;
+            this.txtSuma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuma_KeyPress);
             // 
             // cbProiz
             // 
@@ -236,6 +237,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(121, 20);
             this.txtID.TabIndex = 7;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label3
             // 
@@ -277,6 +279,7 @@
             this.txtSumaIzmeni.Name = "txtSumaIzmeni";
             this.txtSumaIzmeni.Size = new System.Drawing.Size(121, 20);
             this.txtSumaIzmeni.TabIndex = 1;
+            this.txtSumaIzmeni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSumaIzmeni_KeyPress);
             // 
             // groupBox3
             // 
@@ -317,8 +320,10 @@
             // 
             this.txtIDObrisi.Location = new System.Drawing.Point(47, 36);
             this.txtIDObrisi.Name = "txtIDObrisi";
+            this.txtIDObrisi.ShortcutsEnabled = false;
             this.txtIDObrisi.Size = new System.Drawing.Size(121, 20);
             this.txtIDObrisi.TabIndex = 0;
+            this.txtIDObrisi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDObrisi_KeyPress);
             // 
             // groupBox4
             // 
@@ -334,6 +339,16 @@
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pregled avansa pojedinačno";
+            // 
+            // btnNazad
+            // 
+            this.btnNazad.Location = new System.Drawing.Point(6, 78);
+            this.btnNazad.Name = "btnNazad";
+            this.btnNazad.Size = new System.Drawing.Size(64, 23);
+            this.btnNazad.TabIndex = 11;
+            this.btnNazad.Text = "Nazad";
+            this.btnNazad.UseVisualStyleBackColor = true;
+            this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
             // 
             // btnUcitajUk
             // 
@@ -372,16 +387,6 @@
             this.cbPRpojedinacno.Name = "cbPRpojedinacno";
             this.cbPRpojedinacno.Size = new System.Drawing.Size(186, 21);
             this.cbPRpojedinacno.TabIndex = 0;
-            // 
-            // btnNazad
-            // 
-            this.btnNazad.Location = new System.Drawing.Point(6, 78);
-            this.btnNazad.Name = "btnNazad";
-            this.btnNazad.Size = new System.Drawing.Size(64, 23);
-            this.btnNazad.TabIndex = 11;
-            this.btnNazad.Text = "Nazad";
-            this.btnNazad.UseVisualStyleBackColor = true;
-            this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
             // 
             // Avans
             // 

@@ -142,6 +142,7 @@
             this.txtBPG.Name = "txtBPG";
             this.txtBPG.Size = new System.Drawing.Size(100, 20);
             this.txtBPG.TabIndex = 12;
+            this.txtBPG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBPG_KeyPress);
             // 
             // btnNazad
             // 

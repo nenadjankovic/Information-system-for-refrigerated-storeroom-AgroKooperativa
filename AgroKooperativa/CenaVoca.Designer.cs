@@ -168,15 +168,19 @@
             // 
             this.txtCena2klase.Location = new System.Drawing.Point(33, 213);
             this.txtCena2klase.Name = "txtCena2klase";
+            this.txtCena2klase.ShortcutsEnabled = false;
             this.txtCena2klase.Size = new System.Drawing.Size(134, 20);
             this.txtCena2klase.TabIndex = 14;
+            this.txtCena2klase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCena2klase_KeyPress);
             // 
             // txtCena1klase
             // 
             this.txtCena1klase.Location = new System.Drawing.Point(33, 174);
             this.txtCena1klase.Name = "txtCena1klase";
+            this.txtCena1klase.ShortcutsEnabled = false;
             this.txtCena1klase.Size = new System.Drawing.Size(134, 20);
             this.txtCena1klase.TabIndex = 13;
+            this.txtCena1klase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCena1klase_KeyPress);
             // 
             // cbVoce
             // 

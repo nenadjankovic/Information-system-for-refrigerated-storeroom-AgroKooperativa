@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtKolicinaIKlase = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtKoličinaIIKlase = new System.Windows.Forms.TextBox();
+            this.txtKolicinaIIKlase = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpOtkup = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,6 +47,17 @@
             this.btnNazad = new System.Windows.Forms.Button();
             this.btnStanjeOtkupa = new System.Windows.Forms.Button();
             this.dgwOtkup = new System.Windows.Forms.DataGridView();
+            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NazivVoca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BrutoIklasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BrutoIIKlasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NetoIKlasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NetoIIKlasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rdI = new System.Windows.Forms.RadioButton();
+            this.rbII = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOtkup)).BeginInit();
             this.SuspendLayout();
@@ -89,35 +100,39 @@
             // 
             // txtKolicinaIKlase
             // 
-            this.txtKolicinaIKlase.Location = new System.Drawing.Point(26, 98);
+            this.txtKolicinaIKlase.Location = new System.Drawing.Point(26, 104);
             this.txtKolicinaIKlase.Name = "txtKolicinaIKlase";
+            this.txtKolicinaIKlase.ShortcutsEnabled = false;
             this.txtKolicinaIKlase.Size = new System.Drawing.Size(100, 20);
             this.txtKolicinaIKlase.TabIndex = 4;
+            this.txtKolicinaIKlase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKolicinaIKlase_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 82);
+            this.label3.Location = new System.Drawing.Point(23, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Količina I klase:";
+            this.label3.Text = "Bruto količina I klase:";
             // 
-            // txtKoličinaIIKlase
+            // txtKolicinaIIKlase
             // 
-            this.txtKoličinaIIKlase.Location = new System.Drawing.Point(180, 98);
-            this.txtKoličinaIIKlase.Name = "txtKoličinaIIKlase";
-            this.txtKoličinaIIKlase.Size = new System.Drawing.Size(100, 20);
-            this.txtKoličinaIIKlase.TabIndex = 6;
+            this.txtKolicinaIIKlase.Location = new System.Drawing.Point(180, 104);
+            this.txtKolicinaIIKlase.Name = "txtKolicinaIIKlase";
+            this.txtKolicinaIIKlase.ShortcutsEnabled = false;
+            this.txtKolicinaIIKlase.Size = new System.Drawing.Size(100, 20);
+            this.txtKolicinaIIKlase.TabIndex = 6;
+            this.txtKolicinaIIKlase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKolicinaIIKlase_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(177, 82);
+            this.label4.Location = new System.Drawing.Point(177, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Količina II klase";
+            this.label4.Text = "Bruto količina II klase";
             // 
             // dtpOtkup
             // 
@@ -162,8 +177,10 @@
             // 
             this.txtVraćeno.Location = new System.Drawing.Point(25, 41);
             this.txtVraćeno.Name = "txtVraćeno";
+            this.txtVraćeno.ShortcutsEnabled = false;
             this.txtVraćeno.Size = new System.Drawing.Size(100, 20);
             this.txtVraćeno.TabIndex = 3;
+            this.txtVraćeno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVraćeno_KeyPress);
             // 
             // label7
             // 
@@ -178,8 +195,10 @@
             // 
             this.txtIzdato.Location = new System.Drawing.Point(154, 41);
             this.txtIzdato.Name = "txtIzdato";
+            this.txtIzdato.ShortcutsEnabled = false;
             this.txtIzdato.Size = new System.Drawing.Size(100, 20);
             this.txtIzdato.TabIndex = 1;
+            this.txtIzdato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIzdato_KeyPress);
             // 
             // label6
             // 
@@ -213,16 +232,115 @@
             // dgwOtkup
             // 
             this.dgwOtkup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOtkup.Location = new System.Drawing.Point(307, 30);
+            this.dgwOtkup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ime,
+            this.Prezime,
+            this.NazivVoca,
+            this.BrutoIklasa,
+            this.BrutoIIKlasa,
+            this.NetoIKlasa,
+            this.NetoIIKlasa,
+            this.Tara,
+            this.Datum});
+            this.dgwOtkup.Location = new System.Drawing.Point(307, 25);
             this.dgwOtkup.Name = "dgwOtkup";
-            this.dgwOtkup.Size = new System.Drawing.Size(288, 279);
+            this.dgwOtkup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgwOtkup.Size = new System.Drawing.Size(635, 323);
             this.dgwOtkup.TabIndex = 15;
+            // 
+            // Ime
+            // 
+            this.Ime.DataPropertyName = "Ime";
+            this.Ime.HeaderText = "Ime";
+            this.Ime.Name = "Ime";
+            this.Ime.Width = 70;
+            // 
+            // Prezime
+            // 
+            this.Prezime.DataPropertyName = "Prezime";
+            this.Prezime.HeaderText = "Prezime";
+            this.Prezime.Name = "Prezime";
+            this.Prezime.Width = 80;
+            // 
+            // NazivVoca
+            // 
+            this.NazivVoca.DataPropertyName = "Naziv";
+            this.NazivVoca.HeaderText = "Voće";
+            this.NazivVoca.Name = "NazivVoca";
+            this.NazivVoca.Width = 60;
+            // 
+            // BrutoIklasa
+            // 
+            this.BrutoIklasa.DataPropertyName = "BrutoKolicinaIKlase";
+            this.BrutoIklasa.HeaderText = "Bruto I klasa";
+            this.BrutoIklasa.Name = "BrutoIklasa";
+            this.BrutoIklasa.Width = 60;
+            // 
+            // BrutoIIKlasa
+            // 
+            this.BrutoIIKlasa.DataPropertyName = "BrutoKolicinaIIKlase";
+            this.BrutoIIKlasa.HeaderText = "Bruto II klasa";
+            this.BrutoIIKlasa.Name = "BrutoIIKlasa";
+            this.BrutoIIKlasa.Width = 60;
+            // 
+            // NetoIKlasa
+            // 
+            this.NetoIKlasa.DataPropertyName = "NetoKolicinaIKlase";
+            this.NetoIKlasa.HeaderText = "Neto I klasa";
+            this.NetoIKlasa.Name = "NetoIKlasa";
+            this.NetoIKlasa.Width = 60;
+            // 
+            // NetoIIKlasa
+            // 
+            this.NetoIIKlasa.DataPropertyName = "NetoKolicinaIIKlase";
+            this.NetoIIKlasa.HeaderText = "Neto II klasa";
+            this.NetoIIKlasa.Name = "NetoIIKlasa";
+            this.NetoIIKlasa.Width = 60;
+            // 
+            // Tara
+            // 
+            this.Tara.DataPropertyName = "Tara";
+            this.Tara.HeaderText = "Tara";
+            this.Tara.Name = "Tara";
+            this.Tara.Width = 60;
+            // 
+            // Datum
+            // 
+            this.Datum.DataPropertyName = "Datum";
+            this.Datum.HeaderText = "Datum";
+            this.Datum.Name = "Datum";
+            // 
+            // rdI
+            // 
+            this.rdI.AutoSize = true;
+            this.rdI.Location = new System.Drawing.Point(26, 68);
+            this.rdI.Name = "rdI";
+            this.rdI.Size = new System.Drawing.Size(56, 17);
+            this.rdI.TabIndex = 18;
+            this.rdI.TabStop = true;
+            this.rdI.Text = "I klasa";
+            this.rdI.UseVisualStyleBackColor = true;
+            this.rdI.CheckedChanged += new System.EventHandler(this.rdI_CheckedChanged);
+            // 
+            // rbII
+            // 
+            this.rbII.AutoSize = true;
+            this.rbII.Location = new System.Drawing.Point(180, 68);
+            this.rbII.Name = "rbII";
+            this.rbII.Size = new System.Drawing.Size(59, 17);
+            this.rbII.TabIndex = 19;
+            this.rbII.TabStop = true;
+            this.rbII.Text = "II klasa";
+            this.rbII.UseVisualStyleBackColor = true;
+            this.rbII.CheckedChanged += new System.EventHandler(this.rbII_CheckedChanged);
             // 
             // UnesiOtkup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 335);
+            this.ClientSize = new System.Drawing.Size(969, 424);
+            this.Controls.Add(this.rbII);
+            this.Controls.Add(this.rdI);
             this.Controls.Add(this.dgwOtkup);
             this.Controls.Add(this.btnStanjeOtkupa);
             this.Controls.Add(this.btnNazad);
@@ -231,7 +349,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpOtkup);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtKoličinaIIKlase);
+            this.Controls.Add(this.txtKolicinaIIKlase);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtKolicinaIKlase);
             this.Controls.Add(this.label2);
@@ -260,7 +378,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtKolicinaIKlase;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtKoličinaIIKlase;
+        private System.Windows.Forms.TextBox txtKolicinaIIKlase;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpOtkup;
         private System.Windows.Forms.Label label5;
@@ -273,5 +391,16 @@
         private System.Windows.Forms.Button btnNazad;
         private System.Windows.Forms.Button btnStanjeOtkupa;
         private System.Windows.Forms.DataGridView dgwOtkup;
+        private System.Windows.Forms.RadioButton rdI;
+        private System.Windows.Forms.RadioButton rbII;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NazivVoca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BrutoIklasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BrutoIIKlasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NetoIKlasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NetoIIKlasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tara;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
     }
 }

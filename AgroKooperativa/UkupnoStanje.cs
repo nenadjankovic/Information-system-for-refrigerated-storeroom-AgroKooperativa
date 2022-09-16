@@ -77,29 +77,29 @@ namespace AgroKooperativa
                     {
                         if (o.IDVoca == 1)
                         {
-                            kolVilamet1 += o.KolicinaIKlase;
-                            kolVilamet2 += o.KolicinaIIKlase;
+                            kolVilamet1 += o.NetoKolicinaIKlase;
+                            kolVilamet2 += o.NetoKolicinaIIKlase;
 
                         }
                         else if (o.IDVoca == 2)
                         {
-                            kolMiker1 += o.KolicinaIKlase;
-                            kolMiker2 += o.KolicinaIIKlase;
+                            kolMiker1 += o.NetoKolicinaIKlase;
+                            kolMiker2 += o.NetoKolicinaIIKlase;
                         }
                         else if (o.IDVoca == 3)
                         {
-                            kolFertodi1 += o.KolicinaIKlase;
-                            kolFertodi2 += o.KolicinaIIKlase;
+                            kolFertodi1 += o.NetoKolicinaIKlase;
+                            kolFertodi2 += o.NetoKolicinaIIKlase;
                         }
                         else if (o.IDVoca == 4)
                         {
-                            kolGlen1 += o.KolicinaIKlase;
-                            kolGlen2 += o.KolicinaIIKlase;
+                            kolGlen1 += o.NetoKolicinaIKlase;
+                            kolGlen2 += o.NetoKolicinaIIKlase;
                         }
                         else if (o.IDVoca == 5)
                         {
-                            kolPolka1 += o.KolicinaIKlase;
-                            kolPolka2 += o.KolicinaIIKlase;
+                            kolPolka1 += o.NetoKolicinaIKlase;
+                            kolPolka2 += o.NetoKolicinaIIKlase;
                         }
 
                     }

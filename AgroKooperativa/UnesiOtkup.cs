@@ -31,6 +31,13 @@ namespace AgroKooperativa
         private void UnesiOtkup_Load(object sender, EventArgs e)
         {
             fillComboBox();
+            popuniOtkup();
+            txtKolicinaIKlase.Enabled = false;
+            txtKolicinaIIKlase.Enabled = false;
+            txtKolicinaIKlase.Text = "0";
+            txtKolicinaIIKlase.Text = "0";
+            txtVraćeno.Text ="0";
+            txtIzdato.Text = "0";
             
         }
         public void fillComboBox()
@@ -47,10 +54,7 @@ namespace AgroKooperativa
             {
                 cbVoce.Items.Add(v.Naziv);
             }
-            txtKoličinaIIKlase.Text = "0";
-            txtKolicinaIKlase.Text = "0";
-            txtIzdato.Text = "0";
-            txtVraćeno.Text = "0";
+
             
         }
 
@@ -90,45 +94,87 @@ namespace AgroKooperativa
         private void btnUnesi_Click(object sender, EventArgs e)
         {
 
-
-            Otkup o = new Otkup();
-
-            o.KolicinaIKlase = Convert.ToDecimal(txtKolicinaIKlase.Text);
-            
-            o.KolicinaIIKlase = Convert.ToDecimal(txtKoličinaIIKlase.Text);
-            o.Datum = dtpOtkup.Value;
-            o.IDVoca = odrediVoce().IDVoca;
-            o.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
-
-            if (this.otkupBusiness.InsertOtkup(o))
+            if (cbProizvodjaci.SelectedIndex == -1)
             {
-                MessageBox.Show("Uspešno unet otkup!");
+                MessageBox.Show("Morate odabrati proizvođača u pdajućoj listi!");
+            }
+            else if (cbVoce.SelectedIndex == -1)
+            {
+                MessageBox.Show("Morate odabrati voćeu padajućoj listi!");
             }
             else
             {
-                MessageBox.Show("Neuspešno zaveden otkup!");
-            }
 
-            Ambalaza a = new Ambalaza();
-            a.vraceno = Convert.ToInt32(txtVraćeno.Text);
-            a.izdato = Convert.ToInt32(txtIzdato.Text);
-            a.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
-            a.datum = dtpOtkup.Value;
 
-            if (this.ambalazaBusiness.InsertAmbalaza(a))
-            {
+                Otkup o = new Otkup();
 
-            }
-            else
-            {
-                MessageBox.Show("Neuspešno zavedena ambalaža");
+                decimal brutoI = decimal.Parse(txtKolicinaIKlase.Text);
+                decimal brutoII = decimal.Parse(txtKolicinaIIKlase.Text);
+                decimal tara = decimal.Parse(txtVraćeno.Text) * 0.4m;
+                decimal netoI = 0;
+                decimal netoII = 0;
+                if (decimal.Parse(txtKolicinaIKlase.Text) == 0)
+                {
+                    netoI = 0;
+
+                }
+                else
+                {
+                    netoI = brutoI - tara;
+                }
+                if (decimal.Parse(txtKolicinaIIKlase.Text) == 0)
+                {
+                    netoII = 0;
+
+                }
+                else
+                {
+                    netoII = brutoII - tara;
+                }
+
+
+
+                o.BrutoKolicinaIKlase = brutoI;
+                o.BrutoKolicinaIIKlase = brutoII;
+                o.NetoKolicinaIKlase = netoI;
+                o.NetoKolicinaIIKlase = netoII;
+                o.Tara = tara;
+                o.Datum = dtpOtkup.Value;
+                o.IDVoca = odrediVoce().IDVoca;
+                o.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
+
+                if (this.otkupBusiness.InsertOtkup(o))
+                {
+                    MessageBox.Show("Uspešno unet otkup!");
+                }
+                else
+                {
+                    MessageBox.Show("Neuspešno zaveden otkup!");
+                }
+
+                Ambalaza a = new Ambalaza();
+                a.vraceno = Convert.ToInt32(txtVraćeno.Text);
+                a.izdato = Convert.ToInt32(txtIzdato.Text);
+                a.idProizvodjaca = odrediProizvodjaca().idProizvodjaca;
+                a.datum = dtpOtkup.Value;
+
+                if (this.ambalazaBusiness.InsertAmbalaza(a))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Neuspešno zavedena ambalaža");
+                }
+
+                popuniOtkup();
+                txtKolicinaIKlase.Text = "0";
+                txtKolicinaIIKlase.Text = "0";
+                txtIzdato.Text = "0";
+                txtVraćeno.Text = "0";
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnStanjeOtkupa_Click(object sender, EventArgs e)
         {
@@ -146,9 +192,72 @@ namespace AgroKooperativa
             m.Show();
         }
 
+        
+
+        private void rdI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdI.Checked)
+            {
+                txtKolicinaIKlase.Enabled = true;
+            }
+            else
+            {
+                txtKolicinaIKlase.Enabled = false;
+            }
+        }
+
+        private void rbII_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbII.Checked)
+            {
+                txtKolicinaIIKlase.Enabled = true;
+            }
+            else
+            {
+                txtKolicinaIIKlase.Enabled = false;
+            }
+        }
 
 
+        private void popuniOtkup()
+        {
+            dgwOtkup.DataSource = this.otkupBusiness.ucitajOtkup();
+        }
 
+        private void txtKolicinaIKlase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void txtKolicinaIIKlase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtVraćeno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIzdato_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46 && ch != 110)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
