@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meni));
             this.btnProizvodjaci = new System.Windows.Forms.Button();
             this.btnCenaVoca = new System.Windows.Forms.Button();
             this.btnOtkup = new System.Windows.Forms.Button();
@@ -37,17 +38,20 @@
             // 
             // btnProizvodjaci
             // 
-            this.btnProizvodjaci.Location = new System.Drawing.Point(2, 12);
+            this.btnProizvodjaci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProizvodjaci.Image = ((System.Drawing.Image)(resources.GetObject("btnProizvodjaci.Image")));
+            this.btnProizvodjaci.Location = new System.Drawing.Point(2, 3);
             this.btnProizvodjaci.Name = "btnProizvodjaci";
             this.btnProizvodjaci.Size = new System.Drawing.Size(150, 113);
             this.btnProizvodjaci.TabIndex = 0;
             this.btnProizvodjaci.Text = "Proizvođači";
+            this.btnProizvodjaci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProizvodjaci.UseVisualStyleBackColor = true;
             this.btnProizvodjaci.Click += new System.EventHandler(this.btnProizvodjaci_Click);
             // 
             // btnCenaVoca
             // 
-            this.btnCenaVoca.Location = new System.Drawing.Point(158, 12);
+            this.btnCenaVoca.Location = new System.Drawing.Point(314, 152);
             this.btnCenaVoca.Name = "btnCenaVoca";
             this.btnCenaVoca.Size = new System.Drawing.Size(150, 113);
             this.btnCenaVoca.TabIndex = 1;
@@ -57,7 +61,7 @@
             // 
             // btnOtkup
             // 
-            this.btnOtkup.Location = new System.Drawing.Point(2, 131);
+            this.btnOtkup.Location = new System.Drawing.Point(158, 79);
             this.btnOtkup.Name = "btnOtkup";
             this.btnOtkup.Size = new System.Drawing.Size(150, 113);
             this.btnOtkup.TabIndex = 3;
@@ -67,7 +71,7 @@
             // 
             // btnUkupnoStanje
             // 
-            this.btnUkupnoStanje.Location = new System.Drawing.Point(158, 131);
+            this.btnUkupnoStanje.Location = new System.Drawing.Point(2, 152);
             this.btnUkupnoStanje.Name = "btnUkupnoStanje";
             this.btnUkupnoStanje.Size = new System.Drawing.Size(150, 113);
             this.btnUkupnoStanje.TabIndex = 4;
@@ -77,7 +81,7 @@
             // 
             // btnAvans
             // 
-            this.btnAvans.Location = new System.Drawing.Point(314, 12);
+            this.btnAvans.Location = new System.Drawing.Point(314, 3);
             this.btnAvans.Name = "btnAvans";
             this.btnAvans.Size = new System.Drawing.Size(150, 113);
             this.btnAvans.TabIndex = 5;
@@ -89,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(477, 271);
             this.Controls.Add(this.btnAvans);
             this.Controls.Add(this.btnUkupnoStanje);
             this.Controls.Add(this.btnOtkup);

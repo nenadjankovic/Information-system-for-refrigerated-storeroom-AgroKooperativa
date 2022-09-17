@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lblSaldoAm = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -52,7 +53,6 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.gpUkupnoPredato = new System.Windows.Forms.GroupBox();
             this.lbldin = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gpSaldo.SuspendLayout();
@@ -86,8 +86,9 @@
             // lblPredato1
             // 
             this.lblPredato1.AutoSize = true;
+            this.lblPredato1.BackColor = System.Drawing.Color.Azure;
             this.lblPredato1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPredato1.ForeColor = System.Drawing.Color.White;
+            this.lblPredato1.ForeColor = System.Drawing.Color.Black;
             this.lblPredato1.Location = new System.Drawing.Point(18, 32);
             this.lblPredato1.Name = "lblPredato1";
             this.lblPredato1.Size = new System.Drawing.Size(0, 25);
@@ -96,8 +97,9 @@
             // lblStanjeAvansa
             // 
             this.lblStanjeAvansa.AutoSize = true;
+            this.lblStanjeAvansa.BackColor = System.Drawing.Color.Azure;
             this.lblStanjeAvansa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStanjeAvansa.ForeColor = System.Drawing.Color.White;
+            this.lblStanjeAvansa.ForeColor = System.Drawing.Color.IndianRed;
             this.lblStanjeAvansa.Location = new System.Drawing.Point(24, 32);
             this.lblStanjeAvansa.Name = "lblStanjeAvansa";
             this.lblStanjeAvansa.Size = new System.Drawing.Size(0, 25);
@@ -148,8 +150,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Azure;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
             this.label1.Location = new System.Drawing.Point(24, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 25);
@@ -162,7 +165,7 @@
             this.gpSaldo.Controls.Add(this.label3);
             this.gpSaldo.Controls.Add(this.lblSaldo);
             this.gpSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpSaldo.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.gpSaldo.ForeColor = System.Drawing.Color.Green;
             this.gpSaldo.Location = new System.Drawing.Point(132, 95);
             this.gpSaldo.Name = "gpSaldo";
             this.gpSaldo.Size = new System.Drawing.Size(172, 69);
@@ -202,19 +205,30 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Tan;
+            this.groupBox4.BackColor = System.Drawing.Color.Azure;
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.groupBox7);
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(-1, 284);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(-1, 290);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(447, 164);
+            this.groupBox4.Size = new System.Drawing.Size(447, 158);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Stanje ambalaže";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Nazad";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox7
             // 
@@ -276,11 +290,11 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.RosyBrown;
+            this.groupBox8.BackColor = System.Drawing.Color.Azure;
             this.groupBox8.Controls.Add(this.gpUkupnoPredato);
             this.groupBox8.Controls.Add(this.gpSaldo);
             this.groupBox8.Controls.Add(this.groupBox2);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(-1, 103);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(447, 181);
@@ -310,21 +324,11 @@
             this.lbldin.TabIndex = 2;
             this.lbldin.Text = "din";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Nazad";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // UkupnoStanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(443, 450);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox4);

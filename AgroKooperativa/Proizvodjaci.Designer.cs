@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proizvodjaci));
             this.dgwProizvodjaci = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,17 +125,20 @@
             // 
             this.btnDodajProizvodjaca.BackColor = System.Drawing.Color.YellowGreen;
             this.btnDodajProizvodjaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajProizvodjaca.Location = new System.Drawing.Point(479, 25);
+            this.btnDodajProizvodjaca.Image = ((System.Drawing.Image)(resources.GetObject("btnDodajProizvodjaca.Image")));
+            this.btnDodajProizvodjaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDodajProizvodjaca.Location = new System.Drawing.Point(501, 25);
             this.btnDodajProizvodjaca.Name = "btnDodajProizvodjaca";
-            this.btnDodajProizvodjaca.Size = new System.Drawing.Size(194, 53);
+            this.btnDodajProizvodjaca.Size = new System.Drawing.Size(162, 53);
             this.btnDodajProizvodjaca.TabIndex = 3;
             this.btnDodajProizvodjaca.Text = "Dodaj proizvođača";
+            this.btnDodajProizvodjaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDodajProizvodjaca.UseVisualStyleBackColor = false;
             this.btnDodajProizvodjaca.Click += new System.EventHandler(this.btnDodajProizvodjaca_Click);
             // 
             // gbObrisi
             // 
-            this.gbObrisi.BackColor = System.Drawing.Color.Bisque;
+            this.gbObrisi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gbObrisi.Controls.Add(this.label2);
             this.gbObrisi.Controls.Add(this.cbPr);
             this.gbObrisi.Controls.Add(this.btnObriši);
@@ -142,7 +146,7 @@
             this.gbObrisi.ForeColor = System.Drawing.Color.Black;
             this.gbObrisi.Location = new System.Drawing.Point(479, 84);
             this.gbObrisi.Name = "gbObrisi";
-            this.gbObrisi.Size = new System.Drawing.Size(200, 156);
+            this.gbObrisi.Size = new System.Drawing.Size(205, 156);
             this.gbObrisi.TabIndex = 4;
             this.gbObrisi.TabStop = false;
             this.gbObrisi.Text = "Obriši proizvođača";
@@ -168,13 +172,16 @@
             // 
             // btnObriši
             // 
-            this.btnObriši.BackColor = System.Drawing.Color.IndianRed;
+            this.btnObriši.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnObriši.ForeColor = System.Drawing.Color.Black;
-            this.btnObriši.Location = new System.Drawing.Point(9, 105);
+            this.btnObriši.Image = ((System.Drawing.Image)(resources.GetObject("btnObriši.Image")));
+            this.btnObriši.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnObriši.Location = new System.Drawing.Point(33, 104);
             this.btnObriši.Name = "btnObriši";
-            this.btnObriši.Size = new System.Drawing.Size(185, 36);
+            this.btnObriši.Size = new System.Drawing.Size(140, 36);
             this.btnObriši.TabIndex = 2;
             this.btnObriši.Text = "Obriši proizvođača";
+            this.btnObriši.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnObriši.UseVisualStyleBackColor = false;
             this.btnObriši.Click += new System.EventHandler(this.btnObriši_Click);
             // 
@@ -201,7 +208,7 @@
             this.Controls.Add(this.dgwProizvodjaci);
             this.Name = "Proizvodjaci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Proizvodjaci";
+            this.Text = "Proizvođači";
             this.Load += new System.EventHandler(this.Proizvodjaci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwProizvodjaci)).EndInit();
             this.gbObrisi.ResumeLayout(false);

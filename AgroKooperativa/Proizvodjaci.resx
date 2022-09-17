@@ -135,4 +135,48 @@
   <metadata name="BPG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Ime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Prezime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Mesto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Telefon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BPG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDodajProizvodjaca.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAGYSURBVEhLpdU/KEZRHMbxKyGFwsBikaIMMiqTGMlgEZlkMyglJgspZBC7slBGKfWKTQlJGAxG
+        JiWl/Pd9bvfodJx7vfe+T32Gc+57fu99z/2d+wYJqccCjnGDXQyiCAWlFQ/49thE5i/Qwgv4ChujyJRO
+        +AraTpEpE/AVtH2iBKkzC19BVy1SZxy+YrZ3FCN1uuEraLtGppThGb6ixgoyR4t9ReUDzcicOsQdolUU
+        nH64he+gbTOpQhf6oFOdd5rgFtf7RanAOl5hX7+CGiIxLVAhe6HMoBI6oe41Q89kCH/SgX18wV10D22J
+        7tieX0Qj3qy5FzQgjPZuA76ixhr0OXcr9GsUd34OYWecRRNJxqCHZ8ZLmIJ+rTIJjS+h64cIdqLBf0ag
+        rjDjuF439cI3Z1w/u6ahdjPjJzxCb1FFdTQ2e7+N8G/MLEiSg6J2s+fj9nwAQRtuo4kketjt6IHazcxr
+        j3WXesebuQP8/hWWohfL2INOonsnco5yDEPt5l4XFa5BXqmO6FTaUR/P4wgn2IK2IrrjIPgBIXMAqJBR
+        DL0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnObriši.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFVSURBVEhL3ZUxS8NAGIZPqJsOgpN/wcGhgyJNTRwUFUTdnTKUKiYODmIRHB3E3cWpaBHc2+of
+        qLvi/5C29prk9bv0bJrWJk3ilBdejrv73ueO74Zj6RbyzCTfDdiUW9GEU1WFqT3A0J5c69kPHC5ixHr2
+        s19jqGUY66sSMV4w156pGJFNOYkYL5xoS9hbqGBn/h3bcwi1qBP1lJOIYCHH6lAYJjbVy2i4UgLfmIF9
+        se+D2aUDYHPWW4sFz0+h26iBdzqwb4o9MI1i3n2ru/vx4WTnbAu8+eUCrVrZHXmrCft8N+HNBw9ot8A5
+        B/9u+8HCSeD2td4DC4sW3R7/D9wF/7bi/qrfIt8BseD0YNbLo6/HYhRz67WS/EGhZuAUlr1bkp3CCqBN
+        e2ux4ZM4Elxh1RFAsKsyGi4qvhwKBzvHSjIaLqgsQ4Gjod/nbyusKOplNBVi7AdoJkemEbcJLwAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
 </root>

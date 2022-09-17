@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnesiOtkup));
             this.cbProizvodjaci = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbVoce = new System.Windows.Forms.ComboBox();
@@ -152,11 +153,14 @@
             // 
             // btnUnesi
             // 
-            this.btnUnesi.Location = new System.Drawing.Point(125, 277);
+            this.btnUnesi.Image = ((System.Drawing.Image)(resources.GetObject("btnUnesi.Image")));
+            this.btnUnesi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUnesi.Location = new System.Drawing.Point(93, 277);
             this.btnUnesi.Name = "btnUnesi";
-            this.btnUnesi.Size = new System.Drawing.Size(75, 46);
+            this.btnUnesi.Size = new System.Drawing.Size(95, 46);
             this.btnUnesi.TabIndex = 10;
             this.btnUnesi.Text = "Unesi otkup";
+            this.btnUnesi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUnesi.UseVisualStyleBackColor = true;
             this.btnUnesi.Click += new System.EventHandler(this.btnUnesi_Click);
             // 
@@ -211,21 +215,27 @@
             // 
             // btnNazad
             // 
-            this.btnNazad.Location = new System.Drawing.Point(26, 277);
+            this.btnNazad.Image = ((System.Drawing.Image)(resources.GetObject("btnNazad.Image")));
+            this.btnNazad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNazad.Location = new System.Drawing.Point(15, 277);
             this.btnNazad.Name = "btnNazad";
-            this.btnNazad.Size = new System.Drawing.Size(75, 46);
+            this.btnNazad.Size = new System.Drawing.Size(72, 46);
             this.btnNazad.TabIndex = 13;
             this.btnNazad.Text = "Nazad";
+            this.btnNazad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNazad.UseVisualStyleBackColor = true;
             this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
             // 
             // btnStanjeOtkupa
             // 
-            this.btnStanjeOtkupa.Location = new System.Drawing.Point(226, 277);
+            this.btnStanjeOtkupa.Image = ((System.Drawing.Image)(resources.GetObject("btnStanjeOtkupa.Image")));
+            this.btnStanjeOtkupa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStanjeOtkupa.Location = new System.Drawing.Point(194, 277);
             this.btnStanjeOtkupa.Name = "btnStanjeOtkupa";
-            this.btnStanjeOtkupa.Size = new System.Drawing.Size(75, 46);
+            this.btnStanjeOtkupa.Size = new System.Drawing.Size(107, 46);
             this.btnStanjeOtkupa.TabIndex = 14;
             this.btnStanjeOtkupa.Text = "Stanje otkupa";
+            this.btnStanjeOtkupa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStanjeOtkupa.UseVisualStyleBackColor = true;
             this.btnStanjeOtkupa.Click += new System.EventHandler(this.btnStanjeOtkupa_Click);
             // 
@@ -245,7 +255,7 @@
             this.dgwOtkup.Location = new System.Drawing.Point(307, 25);
             this.dgwOtkup.Name = "dgwOtkup";
             this.dgwOtkup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwOtkup.Size = new System.Drawing.Size(635, 323);
+            this.dgwOtkup.Size = new System.Drawing.Size(635, 298);
             this.dgwOtkup.TabIndex = 15;
             // 
             // Ime
@@ -338,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 424);
+            this.ClientSize = new System.Drawing.Size(969, 329);
             this.Controls.Add(this.rbII);
             this.Controls.Add(this.rdI);
             this.Controls.Add(this.dgwOtkup);
@@ -356,11 +366,12 @@
             this.Controls.Add(this.cbVoce);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbProizvodjaci);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UnesiOtkup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Otkup";
+            this.Text = "Dodaj otkup";
             this.Load += new System.EventHandler(this.UnesiOtkup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

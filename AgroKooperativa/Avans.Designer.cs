@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Avans));
             this.dgwAvans = new System.Windows.Forms.DataGridView();
             this.idavans = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +62,13 @@
             this.lblUkAvansa = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbPRpojedinacno = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAvans)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgwAvans
@@ -81,8 +83,8 @@
             this.dgwAvans.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgwAvans.Location = new System.Drawing.Point(12, 22);
             this.dgwAvans.Name = "dgwAvans";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dgwAvans.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgwAvans.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwAvans.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgwAvans.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgwAvans.Size = new System.Drawing.Size(427, 362);
@@ -328,6 +330,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Controls.Add(this.btnNazad);
             this.groupBox4.Controls.Add(this.btnUcitajUk);
             this.groupBox4.Controls.Add(this.lblUkAvansa);
@@ -352,7 +355,7 @@
             // 
             // btnUcitajUk
             // 
-            this.btnUcitajUk.Location = new System.Drawing.Point(260, 19);
+            this.btnUcitajUk.Location = new System.Drawing.Point(260, 25);
             this.btnUcitajUk.Name = "btnUcitajUk";
             this.btnUcitajUk.Size = new System.Drawing.Size(75, 23);
             this.btnUcitajUk.TabIndex = 3;
@@ -383,10 +386,20 @@
             // 
             this.cbPRpojedinacno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPRpojedinacno.FormattingEnabled = true;
-            this.cbPRpojedinacno.Location = new System.Drawing.Point(68, 19);
+            this.cbPRpojedinacno.Location = new System.Drawing.Point(68, 27);
             this.cbPRpojedinacno.Name = "cbPRpojedinacno";
             this.cbPRpojedinacno.Size = new System.Drawing.Size(186, 21);
             this.cbPRpojedinacno.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Avans
             // 
@@ -414,6 +427,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,5 +466,6 @@
         private System.Windows.Forms.ComboBox cbPRpojedinacno;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnNazad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -61,7 +61,7 @@
             this.dgwCenaVoca.Location = new System.Drawing.Point(12, 12);
             this.dgwCenaVoca.Name = "dgwCenaVoca";
             this.dgwCenaVoca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwCenaVoca.Size = new System.Drawing.Size(374, 268);
+            this.dgwCenaVoca.Size = new System.Drawing.Size(374, 297);
             this.dgwCenaVoca.TabIndex = 0;
             // 
             // Naziv
@@ -94,11 +94,14 @@
             // 
             // btnNazad
             // 
-            this.btnNazad.Location = new System.Drawing.Point(456, 286);
+            this.btnNazad.Image = ((System.Drawing.Image)(resources.GetObject("btnNazad.Image")));
+            this.btnNazad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNazad.Location = new System.Drawing.Point(463, 286);
             this.btnNazad.Name = "btnNazad";
-            this.btnNazad.Size = new System.Drawing.Size(75, 23);
+            this.btnNazad.Size = new System.Drawing.Size(69, 23);
             this.btnNazad.TabIndex = 2;
             this.btnNazad.Text = "Nazad";
+            this.btnNazad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNazad.UseVisualStyleBackColor = true;
             this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
             // 
@@ -147,20 +150,23 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // btnIzmeni
             // 
-            this.btnIzmeni.Location = new System.Drawing.Point(52, 239);
+            this.btnIzmeni.Image = ((System.Drawing.Image)(resources.GetObject("btnIzmeni.Image")));
+            this.btnIzmeni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIzmeni.Location = new System.Drawing.Point(49, 239);
             this.btnIzmeni.Name = "btnIzmeni";
-            this.btnIzmeni.Size = new System.Drawing.Size(75, 23);
+            this.btnIzmeni.Size = new System.Drawing.Size(90, 23);
             this.btnIzmeni.TabIndex = 15;
             this.btnIzmeni.Text = "Izmeni cenu";
+            this.btnIzmeni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIzmeni.UseVisualStyleBackColor = true;
             this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
             // 
@@ -186,9 +192,9 @@
             // 
             this.cbVoce.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVoce.FormattingEnabled = true;
-            this.cbVoce.Location = new System.Drawing.Point(33, 58);
+            this.cbVoce.Location = new System.Drawing.Point(6, 72);
             this.cbVoce.Name = "cbVoce";
-            this.cbVoce.Size = new System.Drawing.Size(134, 21);
+            this.cbVoce.Size = new System.Drawing.Size(175, 21);
             this.cbVoce.TabIndex = 12;
             // 
             // CenaVoca
