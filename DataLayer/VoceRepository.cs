@@ -46,6 +46,34 @@ namespace DataLayer
                 return result;
             }
         }
-       
+
+        public int DeleteVoce(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("DELETE FROM Voce WHERE Voce.IDVoca = '" + id + "' ;");
+
+                return sqlCommand.ExecuteNonQuery();
+
+            }
+        }
+
+        public int InsertVoce(Voce v)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("INSERT INTO Voce VALUES('{0}')", v.Naziv);
+
+                return sqlCommand.ExecuteNonQuery();
+
+            }
+        }
+
     }
 }

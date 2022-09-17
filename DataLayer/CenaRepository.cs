@@ -65,5 +65,19 @@ namespace DataLayer
             return sqlCommand.ExecuteNonQuery();
             }
         }
+/*
+        public int InsertCena(Cena c)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("INSERT INTO Korisnici VALUES({0},{1},'{2}',{3})", c.CenaIKlase, c.CenaIIKlase, k.korisnickoIme, k.lozinka);
+
+                return sqlCommand.ExecuteNonQuery();
+
+            }
+        }*/
     }
 }

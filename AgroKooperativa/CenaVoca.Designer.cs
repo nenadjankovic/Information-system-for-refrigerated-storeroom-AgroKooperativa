@@ -58,10 +58,10 @@
             this.CenaIKlase,
             this.CenaIIKlase,
             this.Datum});
-            this.dgwCenaVoca.Location = new System.Drawing.Point(12, 12);
+            this.dgwCenaVoca.Location = new System.Drawing.Point(209, 12);
             this.dgwCenaVoca.Name = "dgwCenaVoca";
             this.dgwCenaVoca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwCenaVoca.Size = new System.Drawing.Size(374, 297);
+            this.dgwCenaVoca.Size = new System.Drawing.Size(374, 179);
             this.dgwCenaVoca.TabIndex = 0;
             // 
             // Naziv
@@ -96,7 +96,7 @@
             // 
             this.btnNazad.Image = ((System.Drawing.Image)(resources.GetObject("btnNazad.Image")));
             this.btnNazad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNazad.Location = new System.Drawing.Point(463, 286);
+            this.btnNazad.Location = new System.Drawing.Point(70, 286);
             this.btnNazad.Name = "btnNazad";
             this.btnNazad.Size = new System.Drawing.Size(69, 23);
             this.btnNazad.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.groupBox1.Controls.Add(this.txtCena2klase);
             this.groupBox1.Controls.Add(this.txtCena1klase);
             this.groupBox1.Controls.Add(this.cbVoce);
-            this.groupBox1.Location = new System.Drawing.Point(405, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(191, 268);
             this.groupBox1.TabIndex = 3;
@@ -201,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 313);
+            this.ClientSize = new System.Drawing.Size(595, 313);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.dgwCenaVoca);

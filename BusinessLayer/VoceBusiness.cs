@@ -27,5 +27,18 @@ namespace BusinessLayer
         {
             return this.voceRepository.GetAllVoce();
         }
+
+        public bool DeleteVoce(int id)
+        {
+            if (this.voceRepository.DeleteVoce(id) > 0)
+                return true;
+            return false;
+        }
+        public bool InsertVoce(Voce v)
+        {
+            if (this.voceRepository.InsertVoce(v) > 0)
+                return true;
+            return false;
+        }
     }
 }

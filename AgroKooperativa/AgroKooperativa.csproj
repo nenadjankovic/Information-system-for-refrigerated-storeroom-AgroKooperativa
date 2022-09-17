@@ -76,6 +76,12 @@
     <Compile Include="PrikazStanjaOtkupa.Designer.cs">
       <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrikazVoca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazVoca.Designer.cs">
+      <DependentUpon>PrikazVoca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registracija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrikazStanjaOtkupa.resx">
       <DependentUpon>PrikazStanjaOtkupa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikazVoca.resx">
+      <DependentUpon>PrikazVoca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>

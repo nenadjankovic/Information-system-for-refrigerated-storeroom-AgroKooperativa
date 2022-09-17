@@ -82,6 +82,7 @@ namespace AgroKooperativa
                    
                 }
                 ucitajProizvodjace();
+                fillCombo();
             }
             catch (Exception)
             {
