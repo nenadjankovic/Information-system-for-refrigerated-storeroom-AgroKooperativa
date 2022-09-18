@@ -115,5 +115,14 @@ namespace AgroKooperativa
         {
             
         }
+
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new CenaVoca();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+
+        }
     }
 }

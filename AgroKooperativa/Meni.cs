@@ -66,5 +66,13 @@ namespace AgroKooperativa
             m.Closed += (s, args) => this.Close();
             m.Show();
         }
+
+        private void btnOdjavise_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new Login();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+        }
     }
 }

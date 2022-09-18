@@ -34,6 +34,7 @@
             this.btnOtkup = new System.Windows.Forms.Button();
             this.btnUkupnoStanje = new System.Windows.Forms.Button();
             this.btnAvans = new System.Windows.Forms.Button();
+            this.btnOdjavise = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProizvodjaci
@@ -42,7 +43,7 @@
             this.btnProizvodjaci.Image = ((System.Drawing.Image)(resources.GetObject("btnProizvodjaci.Image")));
             this.btnProizvodjaci.Location = new System.Drawing.Point(2, 3);
             this.btnProizvodjaci.Name = "btnProizvodjaci";
-            this.btnProizvodjaci.Size = new System.Drawing.Size(150, 113);
+            this.btnProizvodjaci.Size = new System.Drawing.Size(150, 126);
             this.btnProizvodjaci.TabIndex = 0;
             this.btnProizvodjaci.Text = "Proizvođači";
             this.btnProizvodjaci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -53,9 +54,9 @@
             // 
             this.btnCenaVoca.Image = ((System.Drawing.Image)(resources.GetObject("btnCenaVoca.Image")));
             this.btnCenaVoca.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCenaVoca.Location = new System.Drawing.Point(314, 152);
+            this.btnCenaVoca.Location = new System.Drawing.Point(158, 143);
             this.btnCenaVoca.Name = "btnCenaVoca";
-            this.btnCenaVoca.Size = new System.Drawing.Size(150, 113);
+            this.btnCenaVoca.Size = new System.Drawing.Size(150, 122);
             this.btnCenaVoca.TabIndex = 1;
             this.btnCenaVoca.Text = "Cena voća";
             this.btnCenaVoca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -66,7 +67,7 @@
             // 
             this.btnOtkup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOtkup.Image = ((System.Drawing.Image)(resources.GetObject("btnOtkup.Image")));
-            this.btnOtkup.Location = new System.Drawing.Point(158, 72);
+            this.btnOtkup.Location = new System.Drawing.Point(158, 3);
             this.btnOtkup.Name = "btnOtkup";
             this.btnOtkup.Size = new System.Drawing.Size(150, 126);
             this.btnOtkup.TabIndex = 3;
@@ -79,9 +80,9 @@
             // 
             this.btnUkupnoStanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUkupnoStanje.Image = ((System.Drawing.Image)(resources.GetObject("btnUkupnoStanje.Image")));
-            this.btnUkupnoStanje.Location = new System.Drawing.Point(2, 152);
+            this.btnUkupnoStanje.Location = new System.Drawing.Point(2, 143);
             this.btnUkupnoStanje.Name = "btnUkupnoStanje";
-            this.btnUkupnoStanje.Size = new System.Drawing.Size(150, 113);
+            this.btnUkupnoStanje.Size = new System.Drawing.Size(150, 122);
             this.btnUkupnoStanje.TabIndex = 4;
             this.btnUkupnoStanje.Text = "Saldo";
             this.btnUkupnoStanje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -94,18 +95,32 @@
             this.btnAvans.Image = ((System.Drawing.Image)(resources.GetObject("btnAvans.Image")));
             this.btnAvans.Location = new System.Drawing.Point(314, 3);
             this.btnAvans.Name = "btnAvans";
-            this.btnAvans.Size = new System.Drawing.Size(150, 113);
+            this.btnAvans.Size = new System.Drawing.Size(150, 126);
             this.btnAvans.TabIndex = 5;
             this.btnAvans.Text = "Avans";
             this.btnAvans.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAvans.UseVisualStyleBackColor = true;
             this.btnAvans.Click += new System.EventHandler(this.btnAvans_Click);
             // 
+            // btnOdjavise
+            // 
+            this.btnOdjavise.Image = ((System.Drawing.Image)(resources.GetObject("btnOdjavise.Image")));
+            this.btnOdjavise.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOdjavise.Location = new System.Drawing.Point(314, 143);
+            this.btnOdjavise.Name = "btnOdjavise";
+            this.btnOdjavise.Size = new System.Drawing.Size(150, 122);
+            this.btnOdjavise.TabIndex = 6;
+            this.btnOdjavise.Text = "Odjavi se";
+            this.btnOdjavise.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOdjavise.UseVisualStyleBackColor = true;
+            this.btnOdjavise.Click += new System.EventHandler(this.btnOdjavise_Click);
+            // 
             // Meni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 271);
+            this.Controls.Add(this.btnOdjavise);
             this.Controls.Add(this.btnAvans);
             this.Controls.Add(this.btnUkupnoStanje);
             this.Controls.Add(this.btnOtkup);
@@ -126,5 +141,6 @@
         private System.Windows.Forms.Button btnOtkup;
         private System.Windows.Forms.Button btnUkupnoStanje;
         private System.Windows.Forms.Button btnAvans;
+        private System.Windows.Forms.Button btnOdjavise;
     }
 }

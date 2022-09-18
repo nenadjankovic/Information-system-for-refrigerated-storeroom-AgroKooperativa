@@ -33,5 +33,17 @@ namespace BusinessLayer
         {
             return this.cenaRepository.GetAllCena();
         }
+
+        public bool InsertCena(Cena c)
+        {
+            if (this.cenaRepository.InsertCena(c) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

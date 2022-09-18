@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.errNaziv = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwVoce)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,7 +88,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(180, 103);
+            this.groupBox1.Size = new System.Drawing.Size(180, 88);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodaj voće";
@@ -127,7 +128,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(208, 152);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(168, 103);
+            this.groupBox3.Size = new System.Drawing.Size(168, 88);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Obriši voće";
@@ -174,11 +175,22 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // btnNazad
+            // 
+            this.btnNazad.Location = new System.Drawing.Point(162, 246);
+            this.btnNazad.Name = "btnNazad";
+            this.btnNazad.Size = new System.Drawing.Size(75, 23);
+            this.btnNazad.TabIndex = 6;
+            this.btnNazad.Text = "Nazad";
+            this.btnNazad.UseVisualStyleBackColor = true;
+            this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
+            // 
             // PrikazVoca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 275);
+            this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -213,5 +225,6 @@
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.ErrorProvider errNaziv;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnNazad;
     }
 }

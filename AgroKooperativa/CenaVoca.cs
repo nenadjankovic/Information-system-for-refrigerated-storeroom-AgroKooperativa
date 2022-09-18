@@ -31,6 +31,7 @@ namespace AgroKooperativa
         {
             ucitajCeneVoca();
             fillCombo();
+            fillComboDodajVoce();
         }
 
         private void ucitajCeneVoca()
@@ -68,6 +69,22 @@ namespace AgroKooperativa
             List<Voce> voce = this.voceBusiness.GetAllVoce();
             Voce result = new Voce();
             string nazivVoca = cbVoce.GetItemText(cbVoce.SelectedItem);
+            foreach (Voce v in voce)
+            {
+                if (v.Naziv == nazivVoca)
+                {
+                    result = v;
+                }
+            }
+            return result;
+
+        }
+
+        public Voce odrediVoceNovaCena()
+        {
+            List<Voce> voce = this.voceBusiness.GetAllVoce();
+            Voce result = new Voce();
+            string nazivVoca = cbDodajCenu.GetItemText(cbDodajCenu.SelectedItem);
             foreach (Voce v in voce)
             {
                 if (v.Naziv == nazivVoca)
@@ -131,6 +148,83 @@ namespace AgroKooperativa
             {
                 e.Handled = true;
             }
+        }
+
+        private void fillComboDodajVoce()
+        {
+            
+            List<Voce> voce = this.voceBusiness.GetAllVoce();
+
+            foreach(Voce v in voce)
+            {
+                cbDodajCenu.Items.Add(v.Naziv);
+            }
+                
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+
+            if(cbDodajCenu.SelectedIndex == -1)
+            {
+                MessageBox.Show("Odaberite voće u padajućoj listi!");
+            }
+            else if (string.IsNullOrEmpty(txtNovaCenaI.Text))
+            {
+                MessageBox.Show("Morate uneti cenu I klase!");
+            }
+            else if (string.IsNullOrEmpty(txtNovaCenaII.Text))
+            {
+                MessageBox.Show("Morate uneti cenu II klase!");
+            }
+            else
+            {
+                Cena c = new Cena();
+                List<int> IDs = new List<int>();
+                List<Cena> cene = this.cenaVocaBusiness.GetAllCena();
+
+                foreach (Cena v in cene)
+                {
+                    IDs.Add(v.FK_IDVoca);
+                }
+
+                c.CenaIKlase = decimal.Parse(txtNovaCenaI.Text);
+                c.CenaIIKlase = decimal.Parse(txtNovaCenaII.Text);
+                c.Datum = dtpNovaCena.Value;
+                c.FK_IDVoca = odrediVoceNovaCena().IDVoca;
+
+                if (IDs.Contains(c.FK_IDVoca))
+                {
+                    MessageBox.Show("Za odabrano voće već postoji cena!");
+                }
+                else
+                {
+                    if (this.cenaVocaBusiness.InsertCena(c))
+                    {
+                        MessageBox.Show("Uspešno uneta cena!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nesupešno uneta cena!");
+                    }
+                }
+            }
+            
+
+            dgwCenaVoca.AutoGenerateColumns = false;
+            dgwCenaVoca.DataSource = this.cenaVocaBusiness.ucitajCeneVoca();
+
+
+        }
+
+        private void btnVoce_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var m = new PrikazVoca();
+            m.Closed += (s, args) => this.Close();
+            m.Show();
+
+            
         }
     }
 }

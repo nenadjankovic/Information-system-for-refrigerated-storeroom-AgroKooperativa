@@ -65,7 +65,7 @@ namespace DataLayer
             return sqlCommand.ExecuteNonQuery();
             }
         }
-/*
+
         public int InsertCena(Cena c)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
@@ -73,11 +73,11 @@ namespace DataLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Korisnici VALUES({0},{1},'{2}',{3})", c.CenaIKlase, c.CenaIIKlase, k.korisnickoIme, k.lozinka);
+                sqlCommand.CommandText = string.Format("INSERT INTO CeneVoca VALUES({0},{1},'{2}',{3})", c.CenaIKlase, c.CenaIIKlase, c.Datum, c.FK_IDVoca);
 
                 return sqlCommand.ExecuteNonQuery();
 
             }
-        }*/
+        }
     }
 }

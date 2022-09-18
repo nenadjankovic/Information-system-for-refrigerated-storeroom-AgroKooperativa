@@ -85,6 +85,14 @@ namespace AgroKooperativa
                         lblCenaIKlase.Text = Convert.ToString(c.CenaIKlase);
                         lblCena2Klase.Text = Convert.ToString(c.CenaIIKlase);
                         decimal uk = (sumaI * c.CenaIKlase) + (sumaII * c.CenaIIKlase);
+                        if(uk > 0)
+                        {
+                            lblUkupno.ForeColor = Color.Green;
+                        }
+                        else
+                        {
+                            lblUkupno.ForeColor = Color.Black;
+                        }
                         lblUkupno.Text = Convert.ToString(Math.Round(uk, 2));
                     }
                 }
