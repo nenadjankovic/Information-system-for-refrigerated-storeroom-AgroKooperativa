@@ -61,10 +61,23 @@ namespace DataLayer
             using (SqlConnection sqlCon = new SqlConnection(Konstante.connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Proizvodjaci.ime, Proizvodjaci.Prezime, Voce.Naziv, Otkup.BrutoKolicinaIKlase, Otkup.BrutoKolicinaIIKlase, Otkup.NetoKolicinaIKlase, Otkup.NetoKolicinaIIKlase, Otkup.Tara, Otkup.Datum FROM Otkup INNER JOIN Proizvodjaci ON Otkup.idProizvodjaca = Proizvodjaci.idProizvodjaca INNER JOIN Voce ON Otkup.IDVoca = Voce.IDVoca", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT Otkup.idOtkupa, Proizvodjaci.ime, Proizvodjaci.Prezime, Voce.Naziv, Otkup.BrutoKolicinaIKlase, Otkup.BrutoKolicinaIIKlase, Otkup.NetoKolicinaIKlase, Otkup.NetoKolicinaIIKlase, Otkup.Tara, Otkup.Datum FROM Otkup INNER JOIN Proizvodjaci ON Otkup.idProizvodjaca = Proizvodjaci.idProizvodjaca INNER JOIN Voce ON Otkup.IDVoca = Voce.IDVoca", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 return dtbl;
+            }
+        }
+        public int DeleteOtkup(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Konstante.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("DELETE FROM Otkup WHERE Otkup.idOtkupa = '" + id + "' ;");
+
+                return sqlCommand.ExecuteNonQuery();
+
             }
         }
     }

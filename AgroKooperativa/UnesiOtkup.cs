@@ -259,5 +259,27 @@ namespace AgroKooperativa
                 e.Handled = true;
             }
         }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtIDBrisanje.Text))
+            {
+                MessageBox.Show("Morate uneti ID otkupa za brisanje!");
+            }
+            else
+            {
+                int id = int.Parse(txtIDBrisanje.Text);
+                if (this.otkupBusiness.DeleteOtkup(id))
+                {
+                    MessageBox.Show("Uspešno obrisan otkup!");
+                }
+                else
+                {
+                    MessageBox.Show("Neuspešno obrisan otkup!");
+                }
+                popuniOtkup();
+            }
+            
+        }
     }
 }

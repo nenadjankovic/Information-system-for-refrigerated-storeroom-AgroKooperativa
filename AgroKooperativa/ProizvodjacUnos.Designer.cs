@@ -205,6 +205,7 @@
             this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.lblIme);
             this.Controls.Add(this.btnPotvrdi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

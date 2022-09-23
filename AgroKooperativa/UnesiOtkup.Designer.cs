@@ -48,6 +48,7 @@
             this.btnNazad = new System.Windows.Forms.Button();
             this.btnStanjeOtkupa = new System.Windows.Forms.Button();
             this.dgwOtkup = new System.Windows.Forms.DataGridView();
+            this.idOtkupa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NazivVoca = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +60,13 @@
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rdI = new System.Windows.Forms.RadioButton();
             this.rbII = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.txtIDBrisanje = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOtkup)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbProizvodjaci
@@ -137,15 +143,15 @@
             // 
             // dtpOtkup
             // 
-            this.dtpOtkup.Location = new System.Drawing.Point(77, 160);
+            this.dtpOtkup.Location = new System.Drawing.Point(26, 174);
             this.dtpOtkup.Name = "dtpOtkup";
-            this.dtpOtkup.Size = new System.Drawing.Size(200, 20);
+            this.dtpOtkup.Size = new System.Drawing.Size(213, 20);
             this.dtpOtkup.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 134);
+            this.label5.Location = new System.Drawing.Point(23, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 9;
@@ -155,9 +161,9 @@
             // 
             this.btnUnesi.Image = ((System.Drawing.Image)(resources.GetObject("btnUnesi.Image")));
             this.btnUnesi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUnesi.Location = new System.Drawing.Point(93, 277);
+            this.btnUnesi.Location = new System.Drawing.Point(93, 317);
             this.btnUnesi.Name = "btnUnesi";
-            this.btnUnesi.Size = new System.Drawing.Size(95, 46);
+            this.btnUnesi.Size = new System.Drawing.Size(95, 54);
             this.btnUnesi.TabIndex = 10;
             this.btnUnesi.Text = "Unesi otkup";
             this.btnUnesi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,9 +176,9 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtIzdato);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(26, 201);
+            this.groupBox1.Location = new System.Drawing.Point(26, 215);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 70);
+            this.groupBox1.Size = new System.Drawing.Size(275, 96);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ambalaža";
@@ -217,9 +223,9 @@
             // 
             this.btnNazad.Image = ((System.Drawing.Image)(resources.GetObject("btnNazad.Image")));
             this.btnNazad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNazad.Location = new System.Drawing.Point(15, 277);
+            this.btnNazad.Location = new System.Drawing.Point(15, 317);
             this.btnNazad.Name = "btnNazad";
-            this.btnNazad.Size = new System.Drawing.Size(72, 46);
+            this.btnNazad.Size = new System.Drawing.Size(72, 54);
             this.btnNazad.TabIndex = 13;
             this.btnNazad.Text = "Nazad";
             this.btnNazad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,9 +236,9 @@
             // 
             this.btnStanjeOtkupa.Image = ((System.Drawing.Image)(resources.GetObject("btnStanjeOtkupa.Image")));
             this.btnStanjeOtkupa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStanjeOtkupa.Location = new System.Drawing.Point(194, 277);
+            this.btnStanjeOtkupa.Location = new System.Drawing.Point(194, 317);
             this.btnStanjeOtkupa.Name = "btnStanjeOtkupa";
-            this.btnStanjeOtkupa.Size = new System.Drawing.Size(107, 46);
+            this.btnStanjeOtkupa.Size = new System.Drawing.Size(107, 54);
             this.btnStanjeOtkupa.TabIndex = 14;
             this.btnStanjeOtkupa.Text = "Stanje otkupa";
             this.btnStanjeOtkupa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,8 +247,13 @@
             // 
             // dgwOtkup
             // 
+            this.dgwOtkup.AllowUserToAddRows = false;
+            this.dgwOtkup.AllowUserToDeleteRows = false;
+            this.dgwOtkup.AllowUserToResizeColumns = false;
+            this.dgwOtkup.AllowUserToResizeRows = false;
             this.dgwOtkup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwOtkup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOtkupa,
             this.Ime,
             this.Prezime,
             this.NazivVoca,
@@ -254,9 +265,17 @@
             this.Datum});
             this.dgwOtkup.Location = new System.Drawing.Point(307, 25);
             this.dgwOtkup.Name = "dgwOtkup";
+            this.dgwOtkup.RowHeadersVisible = false;
             this.dgwOtkup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwOtkup.Size = new System.Drawing.Size(635, 298);
+            this.dgwOtkup.Size = new System.Drawing.Size(638, 288);
             this.dgwOtkup.TabIndex = 15;
+            // 
+            // idOtkupa
+            // 
+            this.idOtkupa.DataPropertyName = "idOtkupa";
+            this.idOtkupa.HeaderText = "ID";
+            this.idOtkupa.Name = "idOtkupa";
+            this.idOtkupa.Width = 40;
             // 
             // Ime
             // 
@@ -344,11 +363,50 @@
             this.rbII.UseVisualStyleBackColor = true;
             this.rbII.CheckedChanged += new System.EventHandler(this.rbII_CheckedChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnObrisi);
+            this.groupBox2.Controls.Add(this.txtIDBrisanje);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Location = new System.Drawing.Point(312, 319);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(490, 51);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Obriši otkup";
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(367, 8);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(89, 37);
+            this.btnObrisi.TabIndex = 2;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // txtIDBrisanje
+            // 
+            this.txtIDBrisanje.Location = new System.Drawing.Point(255, 21);
+            this.txtIDBrisanje.Name = "txtIDBrisanje";
+            this.txtIDBrisanje.Size = new System.Drawing.Size(106, 20);
+            this.txtIDBrisanje.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(234, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Unesite ID otkupa kojeg želite da bude uklonite:";
+            // 
             // UnesiOtkup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 329);
+            this.ClientSize = new System.Drawing.Size(969, 373);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rbII);
             this.Controls.Add(this.rdI);
             this.Controls.Add(this.dgwOtkup);
@@ -366,16 +424,19 @@
             this.Controls.Add(this.cbVoce);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbProizvodjaci);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UnesiOtkup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dodaj otkup";
+            this.Text = "Evidencija otkupa";
             this.Load += new System.EventHandler(this.UnesiOtkup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOtkup)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,6 +465,11 @@
         private System.Windows.Forms.DataGridView dgwOtkup;
         private System.Windows.Forms.RadioButton rdI;
         private System.Windows.Forms.RadioButton rbII;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.TextBox txtIDBrisanje;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOtkupa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivVoca;

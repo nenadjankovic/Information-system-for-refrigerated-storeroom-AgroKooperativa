@@ -63,6 +63,10 @@
             // 
             // dgwCenaVoca
             // 
+            this.dgwCenaVoca.AllowUserToAddRows = false;
+            this.dgwCenaVoca.AllowUserToDeleteRows = false;
+            this.dgwCenaVoca.AllowUserToResizeColumns = false;
+            this.dgwCenaVoca.AllowUserToResizeRows = false;
             this.dgwCenaVoca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgwCenaVoca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCenaVoca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,12 +74,12 @@
             this.CenaIKlase,
             this.CenaIIKlase,
             this.Datum});
-            this.dgwCenaVoca.Location = new System.Drawing.Point(222, 12);
+            this.dgwCenaVoca.Location = new System.Drawing.Point(230, 12);
             this.dgwCenaVoca.Name = "dgwCenaVoca";
             this.dgwCenaVoca.ReadOnly = true;
             this.dgwCenaVoca.RowHeadersVisible = false;
             this.dgwCenaVoca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwCenaVoca.Size = new System.Drawing.Size(355, 179);
+            this.dgwCenaVoca.Size = new System.Drawing.Size(332, 179);
             this.dgwCenaVoca.TabIndex = 0;
             // 
             // Naziv
@@ -308,7 +312,7 @@
             this.btnVoce.Name = "btnVoce";
             this.btnVoce.Size = new System.Drawing.Size(69, 30);
             this.btnVoce.TabIndex = 5;
-            this.btnVoce.Text = "Voce";
+            this.btnVoce.Text = "Voće";
             this.btnVoce.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoce.UseVisualStyleBackColor = true;
             this.btnVoce.Click += new System.EventHandler(this.btnVoce_Click);
@@ -317,15 +321,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 313);
+            this.ClientSize = new System.Drawing.Size(585, 313);
             this.Controls.Add(this.btnVoce);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.dgwCenaVoca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CenaVoca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CenaVoca";
+            this.Text = "Cene voća";
             this.Load += new System.EventHandler(this.CenaVoca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCenaVoca)).EndInit();
             this.groupBox1.ResumeLayout(false);

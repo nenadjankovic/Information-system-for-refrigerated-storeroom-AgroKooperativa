@@ -126,6 +126,10 @@
             this.Controls.Add(this.btnOtkup);
             this.Controls.Add(this.btnCenaVoca);
             this.Controls.Add(this.btnProizvodjaci);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Meni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meni";

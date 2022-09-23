@@ -311,7 +311,7 @@
             // 
             this.lblIzdato.AutoSize = true;
             this.lblIzdato.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIzdato.Location = new System.Drawing.Point(34, 23);
+            this.lblIzdato.Location = new System.Drawing.Point(32, 23);
             this.lblIzdato.Name = "lblIzdato";
             this.lblIzdato.Size = new System.Drawing.Size(0, 25);
             this.lblIzdato.TabIndex = 5;
@@ -330,7 +330,7 @@
             // 
             this.lblVraceno.AutoSize = true;
             this.lblVraceno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVraceno.Location = new System.Drawing.Point(24, 23);
+            this.lblVraceno.Location = new System.Drawing.Point(35, 23);
             this.lblVraceno.Name = "lblVraceno";
             this.lblVraceno.Size = new System.Drawing.Size(0, 25);
             this.lblVraceno.TabIndex = 5;
@@ -349,7 +349,7 @@
             // 
             this.lblStanje.AutoSize = true;
             this.lblStanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStanje.Location = new System.Drawing.Point(36, 23);
+            this.lblStanje.Location = new System.Drawing.Point(42, 23);
             this.lblStanje.Name = "lblStanje";
             this.lblStanje.Size = new System.Drawing.Size(0, 25);
             this.lblStanje.TabIndex = 5;
@@ -422,6 +422,9 @@
             this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox13);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PrikazStanjaOtkupa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrikazStanjaOtkupa";

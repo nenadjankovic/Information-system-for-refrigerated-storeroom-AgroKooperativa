@@ -57,12 +57,12 @@
             this.btnObriši = new System.Windows.Forms.Button();
             this.txtIDObrisi = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnNazad = new System.Windows.Forms.Button();
             this.btnUcitajUk = new System.Windows.Forms.Button();
             this.lblUkAvansa = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbPRpojedinacno = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAvans)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,6 +73,10 @@
             // 
             // dgwAvans
             // 
+            this.dgwAvans.AllowUserToAddRows = false;
+            this.dgwAvans.AllowUserToDeleteRows = false;
+            this.dgwAvans.AllowUserToResizeColumns = false;
+            this.dgwAvans.AllowUserToResizeRows = false;
             this.dgwAvans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwAvans.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idavans,
@@ -343,6 +347,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pregled avansa pojedinačno";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnNazad
             // 
             this.btnNazad.Location = new System.Drawing.Point(6, 78);
@@ -391,16 +405,6 @@
             this.cbPRpojedinacno.Size = new System.Drawing.Size(186, 21);
             this.cbPRpojedinacno.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // Avans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,11 +416,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgwAvans);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Avans";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Avans";
+            this.Text = "Evidencija avansa";
             this.Load += new System.EventHandler(this.Avans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwAvans)).EndInit();
             this.groupBox1.ResumeLayout(false);

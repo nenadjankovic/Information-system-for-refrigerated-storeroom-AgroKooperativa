@@ -49,6 +49,10 @@
             // 
             // dgwProizvodjaci
             // 
+            this.dgwProizvodjaci.AllowUserToAddRows = false;
+            this.dgwProizvodjaci.AllowUserToDeleteRows = false;
+            this.dgwProizvodjaci.AllowUserToResizeColumns = false;
+            this.dgwProizvodjaci.AllowUserToResizeRows = false;
             this.dgwProizvodjaci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwProizvodjaci.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgwProizvodjaci.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -206,6 +210,9 @@
             this.Controls.Add(this.btnDodajProizvodjaca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgwProizvodjaci);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Proizvodjaci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proizvođači";

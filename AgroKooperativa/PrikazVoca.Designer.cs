@@ -195,9 +195,13 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgwVoce);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PrikazVoca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PrikazVoca";
+            this.Text = "Voće";
             this.Load += new System.EventHandler(this.PrikazVoca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwVoce)).EndInit();
             this.groupBox1.ResumeLayout(false);

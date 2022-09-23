@@ -335,9 +335,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUcitaj);
             this.Controls.Add(this.cbProizvodjac);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UkupnoStanje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UkupnoStanje";
+            this.Text = "Saldo proizvođača";
             this.Load += new System.EventHandler(this.UkupnoStanje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);

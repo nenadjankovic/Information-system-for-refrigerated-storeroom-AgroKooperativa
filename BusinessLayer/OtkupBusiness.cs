@@ -34,5 +34,14 @@ namespace BusinessLayer
         {
             return this.otkupRepository.ucitajOtkup();
         }
+
+        public bool DeleteOtkup(int id)
+        {
+            if (this.otkupRepository.DeleteOtkup(id) > 0)
+                return true;
+            else
+                return false;
+        }
+
     }
 }

@@ -120,23 +120,23 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnRegistrujSe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAGYSURBVEhLpdU/KEZRHMbxKyGFwsBikaIMMiqTGMlgEZlkMyglJgspZBC7slBGKfWKTQlJGAxG
-        JiWl/Pd9bvfodJx7vfe+T32Gc+57fu99z/2d+wYJqccCjnGDXQyiCAWlFQ/49thE5i/Qwgv4ChujyJRO
-        +AraTpEpE/AVtH2iBKkzC19BVy1SZxy+YrZ3FCN1uuEraLtGppThGb6ixgoyR4t9ReUDzcicOsQdolUU
-        nH64he+gbTOpQhf6oFOdd5rgFtf7RanAOl5hX7+CGiIxLVAhe6HMoBI6oe41Q89kCH/SgX18wV10D22J
-        7tieX0Qj3qy5FzQgjPZuA76ixhr0OXcr9GsUd34OYWecRRNJxqCHZ8ZLmIJ+rTIJjS+h64cIdqLBf0ag
-        rjDjuF439cI3Z1w/u6ahdjPjJzxCb1FFdTQ2e7+N8G/MLEiSg6J2s+fj9nwAQRtuo4kketjt6IHazcxr
-        j3WXesebuQP8/hWWohfL2INOonsnco5yDEPt5l4XFa5BXqmO6FTaUR/P4wgn2IK2IrrjIPgBIXMAqJBR
-        DL0AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAZhJREFUSEul
+        1T8oRlEcxvErIYXCwGKRogwyKpMYyWARmWQzKCUmCylkELuyUEYp9YpNCUkYDEYmJaX8931u9+h0nHu9
+        975PfYZz7nt+733P/Z37BgmpxwKOcYNdDKIIBaUVD/j22ETmL9DCC/gKG6PIlE74CtpOkSkT8BW0faIE
+        qTMLX0FXLVJnHL5itncUI3W64Stou0amlOEZvqLGCjJHi31F5QPNyJw6xB2iVRScfriF76BtM6lCF/qg
+        U513muAW1/tFqcA6XmFfv4IaIjEtUCF7ocygEjqh7jVDz2QIf9KBfXzBXXQPbYnu2J5fRCPerLkXNCCM
+        9m4DvqLGGvQ5dyv0axR3fg5hZ5xFE0nGoIdnxkuYgn6tMgmNL6Hrhwh2osF/RqCuMOO4Xjf1wjdnXD+7
+        pqF2M+MnPEJvUUV1NDZ7v43wb8wsSJKDonaz5+P2fABBG26jiSR62O3ogdrNzGuPdZd6x5u5A/z+FZai
+        F8vYg06ieydyjnIMQ+3mXhcVrkFeqY7oVNpRH8/jCCfYgrYiuuMg+AEhcwCokFEMvQAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="btnNazad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACPSURBVEhLYxgFgx7YAPFdCJP6wACI3wHxfzCPykAXiN8AMchwqlugCsTPgRhmOFUtkAPiB0CM
-        bDjVLJAF4vtAjG44qfgxEHsCMQqQAOKbQIxNAzn4ERCjgKNAjE0hJRgF0NwCmgcRCFArkkGGewAxVkDT
-        ZAoDNM1oMEDTogIGaFrYwQCouL4HYY6CoQkYGAByqpO0JmKcTAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAI9JREFUSEtj
+        GAWDHtgA8V0Ik/rAAIjfAfF/MI/KQBeI3wAxyHCqW6AKxM+BGGY4VS2QA+IHQIxsONUskAXi+0CMbjip
+        +DEQewIxCpAA4ptAjE0DOfgREKOAo0CMTSElGAXQ3AKaBxEIUCuSQYZ7ADFWQNNkCgM0zWgwQNOiAgZo
+        WtjBAKi4vgdhjoKhCRgYAHKqk7QmYpxMAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="errIme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
