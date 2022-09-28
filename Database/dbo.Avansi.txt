@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Avansi] (
+    [idAvans]        INT             IDENTITY (1, 1) NOT NULL,
+    [Datum]          DATE            NULL,
+    [Suma]           DECIMAL (10, 2) NULL,
+    [idProizvodjaca] INT             NULL,
+    PRIMARY KEY CLUSTERED ([idAvans] ASC),
+    CONSTRAINT [FK_Avansi_FK_Proizvodjaci] FOREIGN KEY ([idProizvodjaca]) REFERENCES [dbo].[Proizvodjaci] ([idProizvodjaca])
+);
+

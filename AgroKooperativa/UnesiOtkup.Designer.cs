@@ -145,7 +145,7 @@
             // 
             this.dtpOtkup.Location = new System.Drawing.Point(26, 174);
             this.dtpOtkup.Name = "dtpOtkup";
-            this.dtpOtkup.Size = new System.Drawing.Size(213, 20);
+            this.dtpOtkup.Size = new System.Drawing.Size(275, 20);
             this.dtpOtkup.TabIndex = 8;
             // 
             // label5

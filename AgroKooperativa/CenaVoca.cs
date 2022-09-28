@@ -128,7 +128,9 @@ namespace AgroKooperativa
                 }
 
                 dgwCenaVoca.DataSource = this.cenaVocaBusiness.ucitajCeneVoca();
-
+                cbVoce.SelectedIndex = -1;
+                txtCena1klase.Clear();
+                txtCena2klase.Clear();
             }
         }
 
@@ -213,6 +215,9 @@ namespace AgroKooperativa
 
             dgwCenaVoca.AutoGenerateColumns = false;
             dgwCenaVoca.DataSource = this.cenaVocaBusiness.ucitajCeneVoca();
+            cbDodajCenu.SelectedIndex = -1;
+            txtNovaCenaI.Clear();
+            txtNovaCenaII.Clear();
 
 
         }

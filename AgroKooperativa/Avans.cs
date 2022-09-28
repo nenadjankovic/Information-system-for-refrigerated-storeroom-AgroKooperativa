@@ -75,7 +75,7 @@ namespace AgroKooperativa
                 }
 
                 dgwAvans.DataSource = this.avansBusiness.ucitajAvans();
-
+                cbProiz.SelectedIndex = -1;
 
             }
         }
@@ -169,6 +169,7 @@ namespace AgroKooperativa
                 }
             }
             dgwAvans.DataSource = this.avansBusiness.ucitajAvans();
+            cbPrIzmeni.SelectedIndex = -1;
         }
 
         private void btnObriši_Click(object sender, EventArgs e)
@@ -212,6 +213,7 @@ namespace AgroKooperativa
                 }
                 lblUkAvansa.Text = Convert.ToString(suma);
             }
+           
         }
 
         private void btnNazad_Click(object sender, EventArgs e)

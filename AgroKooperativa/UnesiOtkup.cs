@@ -96,11 +96,11 @@ namespace AgroKooperativa
 
             if (cbProizvodjaci.SelectedIndex == -1)
             {
-                MessageBox.Show("Morate odabrati proizvođača u pdajućoj listi!");
+                MessageBox.Show("Morate odabrati proizvođača u padajućoj listi!");
             }
             else if (cbVoce.SelectedIndex == -1)
             {
-                MessageBox.Show("Morate odabrati voćeu padajućoj listi!");
+                MessageBox.Show("Morate odabrati voće u padajućoj listi!");
             }
             else
             {
@@ -172,6 +172,8 @@ namespace AgroKooperativa
                 txtKolicinaIIKlase.Text = "0";
                 txtIzdato.Text = "0";
                 txtVraćeno.Text = "0";
+                cbProizvodjaci.SelectedIndex = -1;
+                cbVoce.SelectedIndex = -1;
             }
         }
         

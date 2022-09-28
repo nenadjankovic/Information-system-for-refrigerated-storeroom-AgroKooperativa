@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Proizvodjaci] (
+    [idProizvodjaca] INT           IDENTITY (1, 1) NOT NULL,
+    [Ime]            NVARCHAR (50) NULL,
+    [Prezime]        NVARCHAR (50) NULL,
+    [Mesto]          NVARCHAR (50) NULL,
+    [Telefon]        NVARCHAR (20) NULL,
+    [BPG]            BIGINT        NULL,
+    PRIMARY KEY CLUSTERED ([idProizvodjaca] ASC)
+);
+

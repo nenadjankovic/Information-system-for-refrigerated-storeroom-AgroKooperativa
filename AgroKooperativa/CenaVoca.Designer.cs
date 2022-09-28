@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CenaVoca));
             this.dgwCenaVoca = new System.Windows.Forms.DataGridView();
-            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CenaIKlase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CenaIIKlase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNazad = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
@@ -54,6 +50,10 @@
             this.btnDodaj = new System.Windows.Forms.Button();
             this.cbDodajCenu = new System.Windows.Forms.ComboBox();
             this.btnVoce = new System.Windows.Forms.Button();
+            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CenaIKlase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CenaIIKlase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCenaVoca)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,40 +79,8 @@
             this.dgwCenaVoca.ReadOnly = true;
             this.dgwCenaVoca.RowHeadersVisible = false;
             this.dgwCenaVoca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwCenaVoca.Size = new System.Drawing.Size(332, 179);
+            this.dgwCenaVoca.Size = new System.Drawing.Size(331, 179);
             this.dgwCenaVoca.TabIndex = 0;
-            // 
-            // Naziv
-            // 
-            this.Naziv.DataPropertyName = "Naziv";
-            this.Naziv.HeaderText = "Naziv voća";
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            this.Naziv.Width = 86;
-            // 
-            // CenaIKlase
-            // 
-            this.CenaIKlase.DataPropertyName = "CenaIKlase";
-            this.CenaIKlase.HeaderText = "Cena I klase";
-            this.CenaIKlase.Name = "CenaIKlase";
-            this.CenaIKlase.ReadOnly = true;
-            this.CenaIKlase.Width = 91;
-            // 
-            // CenaIIKlase
-            // 
-            this.CenaIIKlase.DataPropertyName = "CenaIIKlase";
-            this.CenaIIKlase.HeaderText = "Cena II klase";
-            this.CenaIIKlase.Name = "CenaIIKlase";
-            this.CenaIIKlase.ReadOnly = true;
-            this.CenaIIKlase.Width = 94;
-            // 
-            // Datum
-            // 
-            this.Datum.DataPropertyName = "Datum";
-            this.Datum.HeaderText = "Datum";
-            this.Datum.Name = "Datum";
-            this.Datum.ReadOnly = true;
-            this.Datum.Width = 63;
             // 
             // btnNazad
             // 
@@ -317,6 +285,38 @@
             this.btnVoce.UseVisualStyleBackColor = true;
             this.btnVoce.Click += new System.EventHandler(this.btnVoce_Click);
             // 
+            // Naziv
+            // 
+            this.Naziv.DataPropertyName = "Naziv";
+            this.Naziv.HeaderText = "Naziv voća";
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 86;
+            // 
+            // CenaIKlase
+            // 
+            this.CenaIKlase.DataPropertyName = "CenaIKlase";
+            this.CenaIKlase.HeaderText = "Cena I klase";
+            this.CenaIKlase.Name = "CenaIKlase";
+            this.CenaIKlase.ReadOnly = true;
+            this.CenaIKlase.Width = 91;
+            // 
+            // CenaIIKlase
+            // 
+            this.CenaIIKlase.DataPropertyName = "CenaIIKlase";
+            this.CenaIIKlase.HeaderText = "Cena II klase";
+            this.CenaIIKlase.Name = "CenaIIKlase";
+            this.CenaIIKlase.ReadOnly = true;
+            this.CenaIIKlase.Width = 94;
+            // 
+            // Datum
+            // 
+            this.Datum.DataPropertyName = "Datum";
+            this.Datum.HeaderText = "Datum";
+            this.Datum.Name = "Datum";
+            this.Datum.ReadOnly = true;
+            this.Datum.Width = 63;
+            // 
             // CenaVoca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,10 +347,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CenaIKlase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CenaIIKlase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.Button btnNazad;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnIzmeni;
@@ -372,5 +368,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnVoce;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CenaIKlase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CenaIIKlase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
     }
 }

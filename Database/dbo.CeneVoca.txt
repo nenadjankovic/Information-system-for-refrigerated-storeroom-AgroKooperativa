@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[CeneVoca] (
+    [idCeneVoca]  INT             IDENTITY (1, 1) NOT NULL,
+    [CenaIKlase]  DECIMAL (10, 2) NOT NULL,
+    [CenaIIKlase] DECIMAL (10, 2) NOT NULL,
+    [Datum]       DATE            NOT NULL,
+    [FK_IDVoca]   INT             NOT NULL,
+    CONSTRAINT [FK_CeneVoca_Voce] FOREIGN KEY ([FK_IDVoca]) REFERENCES [dbo].[Voce] ([IDVoca])
+);
+

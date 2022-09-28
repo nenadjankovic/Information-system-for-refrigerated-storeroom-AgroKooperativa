@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[Otkup] (
+    [idOtkupa]             INT             IDENTITY (1, 1) NOT NULL,
+    [BrutoKolicinaIKlase]  DECIMAL (10, 2) NOT NULL,
+    [BrutoKolicinaIIKlase] DECIMAL (10, 2) NOT NULL,
+    [NetoKolicinaIKlase]   DECIMAL (10, 2) NOT NULL,
+    [NetoKolicinaIIKlase]  DECIMAL (10, 2) NOT NULL,
+    [Tara]                 DECIMAL (10, 2) NOT NULL,
+    [Datum]                DATE            NOT NULL,
+    [IDVoca]               INT             NOT NULL,
+    [idProizvodjaca]       INT             NOT NULL,
+    PRIMARY KEY CLUSTERED ([idOtkupa] ASC),
+    CONSTRAINT [FK_Otkup_FK_Proizvodjaci] FOREIGN KEY ([idProizvodjaca]) REFERENCES [dbo].[Proizvodjaci] ([idProizvodjaca]),
+    CONSTRAINT [FK_Otkup_FK_Voce] FOREIGN KEY ([IDVoca]) REFERENCES [dbo].[Voce] ([IDVoca])
+);
+

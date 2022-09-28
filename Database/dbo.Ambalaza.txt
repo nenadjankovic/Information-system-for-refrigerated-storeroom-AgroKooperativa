@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Ambalaza] (
+    [idAmbalaze]     INT  IDENTITY (1, 1) NOT NULL,
+    [Izdato]         INT  NULL,
+    [Vraceno]        INT  NULL,
+    [idProizvodjaca] INT  NULL,
+    [Datum]          DATE NULL,
+    PRIMARY KEY CLUSTERED ([idAmbalaze] ASC),
+    CONSTRAINT [FK_Ambalaza_ToTable] FOREIGN KEY ([idProizvodjaca]) REFERENCES [dbo].[Proizvodjaci] ([idProizvodjaca])
+);
+

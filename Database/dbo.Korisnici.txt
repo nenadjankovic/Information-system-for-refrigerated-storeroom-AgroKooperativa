@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Korisnici] (
+    [idKorisnika]   INT           IDENTITY (1, 1) NOT NULL,
+    [Ime]           NVARCHAR (50) NULL,
+    [Prezime]       NVARCHAR (50) NULL,
+    [KorisnickoIme] NVARCHAR (50) NOT NULL,
+    [Lozinka]       NVARCHAR (50) NOT NULL
+);
+

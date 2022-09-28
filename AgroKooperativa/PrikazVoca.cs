@@ -57,25 +57,35 @@ namespace AgroKooperativa
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            if(cbVoce.SelectedIndex == -1)
+            try
             {
-                MessageBox.Show("Izaberite voće iz padajuće liste");
-            }
-            else
-            {
-                int id = odrediVoce().IDVoca;
-                if (this.voceBusiness.DeleteVoce(id))
+                if (cbVoce.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Uspešno obrisano voće!");
+                    MessageBox.Show("Izaberite voće iz padajuće liste");
                 }
                 else
                 {
-                    MessageBox.Show("Neuspešno obrisano voće!");
-                }
+                    int id = odrediVoce().IDVoca;
+                    if (this.voceBusiness.DeleteVoce(id))
+                    {
+                        MessageBox.Show("Uspešno obrisano voće!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Neuspešno obrisano voće!");
+                    }
 
-                dgwVoce.DataSource = this.voceBusiness.ucitajVoce();
-                fillCombo();
+                    dgwVoce.DataSource = this.voceBusiness.ucitajVoce();
+                    fillCombo();
+                }
+                cbVoce.SelectedIndex = -1;
+
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Nije moguće obrisati izabrano voće!");
+            }
+            
             
         }
 
@@ -102,10 +112,10 @@ namespace AgroKooperativa
             else
             {
                 MessageBox.Show("Neupešno dodato voće!");
+                
             }
-               
-           
 
+            txtNaziv.Clear();
             dgwVoce.DataSource = this.voceBusiness.ucitajVoce();
             fillCombo();
 

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Voce] (
+    [IDVoca] INT           IDENTITY (1, 1) NOT NULL,
+    [Naziv]  NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([IDVoca] ASC)
+);
+
